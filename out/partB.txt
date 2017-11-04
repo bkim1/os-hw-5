@@ -1,0 +1,638 @@
+[ 3393.089978] Loading module...
+[ 3393.089982] Process: systemd-journal
+[ 3393.089984] State: 1
+[ 3393.089986] PID: 1112
+
+[ 3393.089988] Process: systemd-udevd
+[ 3393.089990] State: 256
+[ 3393.089992] PID: 1127
+
+[ 3393.089994] Process: lvmetad
+[ 3393.089996] State: 1
+[ 3393.089998] PID: 1137
+
+[ 3393.090000] Process: cgmanager
+[ 3393.090002] State: 1
+[ 3393.090004] PID: 1418
+
+[ 3393.090007] Process: dbus-daemon
+[ 3393.090009] State: 1
+[ 3393.090011] PID: 1425
+
+[ 3393.090013] Process: cupsd
+[ 3393.090015] State: 1
+[ 3393.090017] PID: 1450
+
+[ 3393.090019] Process: ModemManager
+[ 3393.090021] State: 1
+[ 3393.090023] PID: 1451
+
+[ 3393.090026] Process: dnsmasq
+[ 3393.090028] State: 1
+[ 3393.090030] PID: 1809
+
+[ 3393.090032] Process: dhclient
+[ 3393.090034] State: 1
+[ 3393.090037] PID: 3025
+
+[ 3393.090039] Process: NetworkManager
+[ 3393.090041] State: 1
+[ 3393.090043] PID: 1454
+
+[ 3393.090046] Process: avahi-daemon
+[ 3393.090048] State: 1
+[ 3393.090050] PID: 1517
+
+[ 3393.090053] Process: avahi-daemon
+[ 3393.090054] State: 1
+[ 3393.090056] PID: 1455
+
+[ 3393.090059] Process: acpid
+[ 3393.090061] State: 1
+[ 3393.090062] PID: 1463
+
+[ 3393.090065] Process: cron
+[ 3393.090067] State: 1
+[ 3393.090068] PID: 1465
+
+[ 3393.090071] Process: rsyslogd
+[ 3393.090073] State: 1
+[ 3393.090075] PID: 1470
+
+[ 3393.090078] Process: accounts-daemon
+[ 3393.090080] State: 1
+[ 3393.090082] PID: 1471
+
+[ 3393.090084] Process: systemd-logind
+[ 3393.090086] State: 1
+[ 3393.090088] PID: 1475
+
+[ 3393.090090] Process: cups-browsed
+[ 3393.090092] State: 1
+[ 3393.090094] PID: 1519
+
+[ 3393.090096] Process: polkitd
+[ 3393.090098] State: 1
+[ 3393.090100] PID: 1526
+
+[ 3393.090102] Process: irqbalance
+[ 3393.090104] State: 1
+[ 3393.090106] PID: 1546
+
+[ 3393.090108] Process: VBoxService
+[ 3393.090110] State: 1
+[ 3393.090112] PID: 1582
+
+[ 3393.090115] Process: console-kit-dae
+[ 3393.090116] State: 1
+[ 3393.090118] PID: 1593
+
+[ 3393.090121] Process: Xorg
+[ 3393.090123] State: 1
+[ 3393.090124] PID: 1874
+
+[ 3393.090127] Process: dbus-daemon
+[ 3393.090129] State: 1
+[ 3393.090131] PID: 2110
+
+[ 3393.090133] Process: upstart-udev-br
+[ 3393.090135] State: 1
+[ 3393.090137] PID: 2114
+
+[ 3393.090139] Process: upstart-dbus-br
+[ 3393.090141] State: 1
+[ 3393.090143] PID: 2135
+
+[ 3393.090146] Process: upstart-file-br
+[ 3393.090148] State: 1
+[ 3393.090149] PID: 2137
+
+[ 3393.090152] Process: upstart-dbus-br
+[ 3393.090154] State: 1
+[ 3393.090156] PID: 2138
+
+[ 3393.090158] Process: blueman-applet
+[ 3393.090161] State: 1
+[ 3393.090163] PID: 2237
+
+[ 3393.090166] Process: applet.py
+[ 3393.090168] State: 1
+[ 3393.090169] PID: 2247
+
+[ 3393.090172] Process: nm-applet
+[ 3393.090174] State: 1
+[ 3393.090175] PID: 2255
+
+[ 3393.090178] Process: polkit-gnome-au
+[ 3393.090180] State: 1
+[ 3393.090182] PID: 2261
+
+[ 3393.090184] Process: light-locker
+[ 3393.090186] State: 1
+[ 3393.090188] PID: 2278
+
+[ 3393.090190] Process: xfce4-session
+[ 3393.090192] State: 1
+[ 3393.090194] PID: 2179
+
+[ 3393.090196] Process: sh
+[ 3393.090198] State: 1
+[ 3393.090200] PID: 2168
+
+[ 3393.090202] Process: xfconfd
+[ 3393.090204] State: 1
+[ 3393.090206] PID: 2183
+
+[ 3393.090208] Process: ssh-agent
+[ 3393.090210] State: 1
+[ 3393.090212] PID: 2187
+
+[ 3393.090214] Process: xfwm4
+[ 3393.090216] State: 1
+[ 3393.090218] PID: 2189
+
+[ 3393.090221] Process: panel-1-whisker
+[ 3393.090223] State: 1
+[ 3393.090224] PID: 2339
+
+[ 3393.090227] Process: panel-6-systray
+[ 3393.090229] State: 1
+[ 3393.090230] PID: 2345
+
+[ 3393.090233] Process: panel-10-indica
+[ 3393.090235] State: 1
+[ 3393.090237] PID: 2348
+
+[ 3393.090239] Process: panel-2-datetim
+[ 3393.090241] State: 1
+[ 3393.090243] PID: 2351
+
+[ 3393.090245] Process: xfce4-panel
+[ 3393.090247] State: 1
+[ 3393.090249] PID: 2193
+
+[ 3393.090252] Process: gnome-pty-helpe
+[ 3393.090254] State: 1
+[ 3393.090255] PID: 3183
+
+[ 3393.090258] Process: insmod
+[ 3393.090260] State: 0
+[ 3393.090261] PID: 4645
+
+[ 3393.090264] Process: sudo
+[ 3393.090266] State: 1
+[ 3393.090268] PID: 4644
+
+[ 3393.090275] Process: bash
+[ 3393.090277] State: 1
+[ 3393.090279] PID: 3184
+
+[ 3393.090281] Process: x-terminal-emul
+[ 3393.090283] State: 1
+[ 3393.090285] PID: 3182
+
+[ 3393.090287] Process: sh
+[ 3393.090289] State: 1
+[ 3393.090291] PID: 3181
+
+[ 3393.090293] Process: Thunar
+[ 3393.090296] State: 1
+[ 3393.090298] PID: 2195
+
+[ 3393.090301] Process: xfdesktop
+[ 3393.090303] State: 1
+[ 3393.090305] PID: 2197
+
+[ 3393.090307] Process: xfsettingsd
+[ 3393.090309] State: 1
+[ 3393.090311] PID: 2199
+
+[ 3393.090314] Process: gvfsd
+[ 3393.090315] State: 1
+[ 3393.090317] PID: 2205
+
+[ 3393.090320] Process: gvfsd-network
+[ 3393.090322] State: 1
+[ 3393.090324] PID: 2216
+
+[ 3393.090326] Process: pulseaudio
+[ 3393.090328] State: 1
+[ 3393.090330] PID: 2234
+
+[ 3393.090332] Process: xfce4-power-man
+[ 3393.090334] State: 1
+[ 3393.090336] PID: 2254
+
+[ 3393.090338] Process: dbus-daemon
+[ 3393.090340] State: 1
+[ 3393.090342] PID: 2265
+
+[ 3393.090344] Process: at-spi-bus-laun
+[ 3393.090346] State: 1
+[ 3393.090348] PID: 2257
+
+[ 3393.090350] Process: at-spi2-registr
+[ 3393.090352] State: 1
+[ 3393.090354] PID: 2269
+
+[ 3393.090357] Process: sbscheduler
+[ 3393.090358] State: 1
+[ 3393.090360] PID: 2277
+
+[ 3393.090363] Process: dconf-service
+[ 3393.090365] State: 1
+[ 3393.090366] PID: 2315
+
+[ 3393.090369] Process: xfce4-volumed
+[ 3393.090371] State: 1
+[ 3393.090373] PID: 2318
+
+[ 3393.090375] Process: gvfs-udisks2-vo
+[ 3393.090377] State: 1
+[ 3393.090379] PID: 2347
+
+[ 3393.090381] Process: indicator-sound
+[ 3393.090383] State: 1
+[ 3393.090385] PID: 2368
+
+[ 3393.090387] Process: indicator-appli
+[ 3393.090389] State: 1
+[ 3393.090391] PID: 2369
+
+[ 3393.090393] Process: upstart
+[ 3393.090394] State: 1
+[ 3393.090450] PID: 2366
+
+[ 3393.090452] Process: gvfs-goa-volume
+[ 3393.090454] State: 1
+[ 3393.090456] PID: 2364
+
+[ 3393.090458] Process: gvfs-mtp-volume
+[ 3393.090460] State: 1
+[ 3393.090462] PID: 2384
+
+[ 3393.090465] Process: gvfs-afc-volume
+[ 3393.090466] State: 1
+[ 3393.090468] PID: 2389
+
+[ 3393.090471] Process: gvfs-gphoto2-vo
+[ 3393.090473] State: 1
+[ 3393.090474] PID: 2395
+
+[ 3393.090477] Process: obexd
+[ 3393.090479] State: 1
+[ 3393.090481] PID: 2590
+
+[ 3393.090483] Process: gvfsd-dnssd
+[ 3393.090485] State: 1
+[ 3393.090487] PID: 2597
+
+[ 3393.090489] Process: gvfsd-metadata
+[ 3393.090491] State: 1
+[ 3393.090493] PID: 2660
+
+[ 3393.090495] Process: gvfsd-trash
+[ 3393.090497] State: 1
+[ 3393.090499] PID: 2664
+
+[ 3393.090501] Process: gvfsd-computer
+[ 3393.090503] State: 1
+[ 3393.090505] PID: 2672
+
+[ 3393.090507] Process: leafpad
+[ 3393.090509] State: 1
+[ 3393.090511] PID: 3146
+
+[ 3393.090513] Process: tumblerd
+[ 3393.090515] State: 1
+[ 3393.090517] PID: 3169
+
+[ 3393.090519] Process: upstart
+[ 3393.090521] State: 1
+[ 3393.090523] PID: 1967
+
+[ 3393.090525] Process: lightdm
+[ 3393.090527] State: 1
+[ 3393.090529] PID: 1948
+
+[ 3393.090531] Process: lightdm
+[ 3393.090533] State: 1
+[ 3393.090535] PID: 1857
+
+[ 3393.090538] Process: rtkit-daemon
+[ 3393.090540] State: 1
+[ 3393.090541] PID: 1947
+
+[ 3393.090544] Process: (sd-pam)
+[ 3393.090546] State: 1
+[ 3393.090548] PID: 1960
+
+[ 3393.090550] Process: systemd
+[ 3393.090552] State: 1
+[ 3393.090554] PID: 1959
+
+[ 3393.090556] Process: gnome-keyring-d
+[ 3393.090558] State: 1
+[ 3393.090560] PID: 1965
+
+[ 3393.090562] Process: VBoxClient
+[ 3393.090564] State: 1
+[ 3393.090566] PID: 1983
+
+[ 3393.090568] Process: VBoxClient
+[ 3393.090570] State: 1
+[ 3393.090572] PID: 1981
+
+[ 3393.090574] Process: VBoxClient
+[ 3393.090576] State: 1
+[ 3393.090578] PID: 1993
+
+[ 3393.090580] Process: VBoxClient
+[ 3393.090582] State: 1
+[ 3393.090584] PID: 1991
+
+[ 3393.090587] Process: VBoxClient
+[ 3393.090588] State: 1
+[ 3393.090590] PID: 2000
+
+[ 3393.090593] Process: VBoxClient
+[ 3393.090594] State: 1
+[ 3393.090596] PID: 1999
+
+[ 3393.090599] Process: VBoxClient
+[ 3393.090601] State: 1
+[ 3393.090602] PID: 2006
+
+[ 3393.090605] Process: VBoxClient
+[ 3393.090607] State: 1
+[ 3393.090608] PID: 2005
+
+[ 3393.090611] Process: upowerd
+[ 3393.090613] State: 1
+[ 3393.090615] PID: 2324
+
+[ 3393.090617] Process: udisksd
+[ 3393.090619] State: 1
+[ 3393.090621] PID: 2352
+
+[ 3393.090623] Process: agetty
+[ 3393.090625] State: 1
+[ 3393.090627] PID: 2464
+
+[ 3393.090629] Process: ntpd
+[ 3393.090631] State: 1
+[ 3393.090633] PID: 2480
+
+[ 3393.090635] Process: nmbd
+[ 3393.090637] State: 1
+[ 3393.090639] PID: 2496
+
+[ 3393.090641] Process: smbd
+[ 3393.090643] State: 1
+[ 3393.090645] PID: 2515
+
+[ 3393.090647] Process: smbd
+[ 3393.090649] State: 1
+[ 3393.090651] PID: 2519
+
+[ 3393.090653] Process: smbd
+[ 3393.090655] State: 1
+[ 3393.090657] PID: 2513
+
+[ 3393.090659] Process: systemd
+[ 3393.090661] State: 1
+[ 3393.090663] PID: 1
+
+[ 3393.090666] Process: ksoftirqd/0
+[ 3393.090668] State: 1
+[ 3393.090670] PID: 3
+
+[ 3393.090672] Process: kworker/0:0H
+[ 3393.090674] State: 1
+[ 3393.090676] PID: 5
+
+[ 3393.090678] Process: rcu_sched
+[ 3393.090680] State: 256
+[ 3393.090682] PID: 7
+
+[ 3393.090684] Process: rcu_bh
+[ 3393.090686] State: 1
+[ 3393.090688] PID: 8
+
+[ 3393.090690] Process: migration/0
+[ 3393.090692] State: 1
+[ 3393.090694] PID: 9
+
+[ 3393.090696] Process: migration/1
+[ 3393.090698] State: 1
+[ 3393.090700] PID: 10
+
+[ 3393.090702] Process: ksoftirqd/1
+[ 3393.090704] State: 1
+[ 3393.090706] PID: 11
+
+[ 3393.090708] Process: kworker/1:0H
+[ 3393.090710] State: 1
+[ 3393.090712] PID: 13
+
+[ 3393.090714] Process: kdevtmpfs
+[ 3393.090716] State: 1
+[ 3393.090718] PID: 14
+
+[ 3393.090720] Process: netns
+[ 3393.090722] State: 1
+[ 3393.090724] PID: 15
+
+[ 3393.090726] Process: kworker/u4:1
+[ 3393.090728] State: 1
+[ 3393.090730] PID: 16
+
+[ 3393.090732] Process: perf
+[ 3393.090734] State: 1
+[ 3393.090736] PID: 18
+
+[ 3393.090738] Process: writeback
+[ 3393.090741] State: 1
+[ 3393.090743] PID: 376
+
+[ 3393.090745] Process: crypto
+[ 3393.090747] State: 1
+[ 3393.090749] PID: 378
+
+[ 3393.090752] Process: bioset
+[ 3393.090754] State: 1
+[ 3393.090756] PID: 379
+
+[ 3393.090758] Process: kblockd
+[ 3393.090760] State: 1
+[ 3393.090762] PID: 380
+
+[ 3393.090764] Process: ata_sff
+[ 3393.090766] State: 1
+[ 3393.090768] PID: 437
+
+[ 3393.090770] Process: md
+[ 3393.090772] State: 1
+[ 3393.090774] PID: 460
+
+[ 3393.090777] Process: cfg80211
+[ 3393.090779] State: 1
+[ 3393.090780] PID: 470
+
+[ 3393.090783] Process: rpciod
+[ 3393.090785] State: 1
+[ 3393.090787] PID: 563
+
+[ 3393.090789] Process: kswapd0
+[ 3393.090791] State: 1
+[ 3393.090793] PID: 585
+
+[ 3393.090795] Process: vmstat
+[ 3393.090797] State: 1
+[ 3393.090799] PID: 588
+
+[ 3393.090801] Process: fsnotify_mark
+[ 3393.090803] State: 1
+[ 3393.090805] PID: 662
+
+[ 3393.090807] Process: nfsiod
+[ 3393.090809] State: 1
+[ 3393.090811] PID: 678
+
+[ 3393.090814] Process: acpi_thermal_pm
+[ 3393.090816] State: 1
+[ 3393.090817] PID: 724
+
+[ 3393.090820] Process: bioset
+[ 3393.090822] State: 1
+[ 3393.090823] PID: 729
+
+[ 3393.090826] Process: bioset
+[ 3393.090828] State: 1
+[ 3393.090829] PID: 753
+
+[ 3393.090832] Process: bioset
+[ 3393.090834] State: 1
+[ 3393.090835] PID: 756
+
+[ 3393.090838] Process: bioset
+[ 3393.090840] State: 1
+[ 3393.090842] PID: 759
+
+[ 3393.090844] Process: bioset
+[ 3393.090846] State: 1
+[ 3393.090848] PID: 760
+
+[ 3393.090850] Process: bioset
+[ 3393.090852] State: 1
+[ 3393.090854] PID: 764
+
+[ 3393.090856] Process: bioset
+[ 3393.090858] State: 1
+[ 3393.090860] PID: 767
+
+[ 3393.090862] Process: bioset
+[ 3393.090864] State: 1
+[ 3393.090866] PID: 771
+
+[ 3393.090868] Process: scsi_eh_0
+[ 3393.090870] State: 1
+[ 3393.090872] PID: 780
+
+[ 3393.090875] Process: scsi_tmf_0
+[ 3393.090877] State: 1
+[ 3393.090879] PID: 784
+
+[ 3393.090881] Process: scsi_eh_1
+[ 3393.090890] State: 1
+[ 3393.090892] PID: 795
+
+[ 3393.090894] Process: scsi_tmf_1
+[ 3393.090896] State: 1
+[ 3393.090898] PID: 797
+
+[ 3393.090901] Process: scsi_eh_2
+[ 3393.090903] State: 1
+[ 3393.090905] PID: 799
+
+[ 3393.090907] Process: scsi_tmf_2
+[ 3393.090909] State: 1
+[ 3393.090911] PID: 801
+
+[ 3393.090913] Process: kworker/u4:5
+[ 3393.090915] State: 1
+[ 3393.090917] PID: 808
+
+[ 3393.090920] Process: bioset
+[ 3393.090922] State: 1
+[ 3393.090924] PID: 814
+
+[ 3393.090926] Process: bioset
+[ 3393.090928] State: 1
+[ 3393.090930] PID: 822
+
+[ 3393.090932] Process: kpsmoused
+[ 3393.090934] State: 1
+[ 3393.090936] PID: 868
+
+[ 3393.090938] Process: ipv6_addrconf
+[ 3393.090940] State: 1
+[ 3393.090942] PID: 914
+
+[ 3393.090945] Process: deferwq
+[ 3393.090948] State: 1
+[ 3393.090950] PID: 939
+
+[ 3393.090952] Process: kworker/1:1H
+[ 3393.090955] State: 1
+[ 3393.090957] PID: 979
+
+[ 3393.090959] Process: kworker/0:1H
+[ 3393.090961] State: 1
+[ 3393.090963] PID: 981
+
+[ 3393.090965] Process: jbd2/sda1-8
+[ 3393.090967] State: 1
+[ 3393.090969] PID: 1074
+
+[ 3393.090971] Process: ext4-rsv-conver
+[ 3393.090973] State: 1
+[ 3393.090975] PID: 1075
+
+[ 3393.090977] Process: kauditd
+[ 3393.090979] State: 1
+[ 3393.090981] PID: 1119
+
+[ 3393.090983] Process: iprt-VBoxWQueue
+[ 3393.090985] State: 1
+[ 3393.090987] PID: 1185
+
+[ 3393.090990] Process: kworker/0:0
+[ 3393.090992] State: 1
+[ 3393.090994] PID: 2723
+
+[ 3393.090996] Process: kworker/1:0
+[ 3393.090998] State: 1
+[ 3393.091000] PID: 2757
+
+[ 3393.091002] Process: kworker/0:1
+[ 3393.091004] State: 1
+[ 3393.091006] PID: 3019
+
+[ 3393.091008] Process: kworker/1:2
+[ 3393.091010] State: 1
+[ 3393.091012] PID: 3996
+
+[ 3393.091014] Process: kworker/u4:0
+[ 3393.091016] State: 1
+[ 3393.091018] PID: 4322
+
+[ 3393.091020] Process: kworker/1:1
+[ 3393.091022] State: 1
+[ 3393.091024] PID: 4333
+
+[ 3393.091026] Process: kthreadd
+[ 3393.091028] State: 1
+[ 3393.091030] PID: 2
+
+[ 3421.367158] Removing module...

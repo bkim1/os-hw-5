@@ -1,0 +1,1 @@
+cmd_/media/sf_shared/os-hw-5/src/pp5B.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /media/sf_shared/os-hw-5/src/pp5B.ko /media/sf_shared/os-hw-5/src/pp5B.o /media/sf_shared/os-hw-5/src/pp5B.mod.o
