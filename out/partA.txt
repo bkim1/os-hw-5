@@ -1,2349 +1,1663 @@
-[    0.000000] Initializing cgroup subsys cpuset
-[    0.000000] Initializing cgroup subsys cpu
-[    0.000000] Initializing cgroup subsys cpuacct
-[    0.000000] Linux version 4.4.2 (csci3362@csci3362-VirtualBox) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #4 SMP Tue Aug 15 20:05:33 EDT 2017
-[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.4.2 root=UUID=86dd3541-a580-4ec4-8da5-63d4b187b19f ro
-[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
-[    0.000000] x86/fpu: Supporting XSAVE feature 0x01: 'x87 floating point registers'
-[    0.000000] x86/fpu: Supporting XSAVE feature 0x02: 'SSE registers'
-[    0.000000] x86/fpu: Supporting XSAVE feature 0x04: 'AVX registers'
-[    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
-[    0.000000] x86/fpu: Using 'lazy' FPU context switches.
-[    0.000000] e820: BIOS-provided physical RAM map:
-[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
-[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
-[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff] usable
-[    0.000000] BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
-[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
-[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x00000001263fffff] usable
-[    0.000000] NX (Execute Disable) protection: active
-[    0.000000] SMBIOS 2.5 present.
-[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
-[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
-[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
-[    0.000000] e820: last_pfn = 0x126400 max_arch_pfn = 0x400000000
-[    0.000000] MTRR default type: uncachable
-[    0.000000] MTRR variable ranges disabled:
-[    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- WT  
-[    0.000000] MTRR: Disabled
-[    0.000000] CPU MTRRs all blank - virtualized system.
-[    0.000000] e820: last_pfn = 0xdfff0 max_arch_pfn = 0x400000000
-[    0.000000] found SMP MP-table at [mem 0x0009fff0-0x0009ffff] mapped at [ffff88000009fff0]
-[    0.000000] Scanning 1 areas for low memory corruption
-[    0.000000] Base memory trampoline at [ffff880000099000] 99000 size 24576
-[    0.000000] BRK [0x0211d000, 0x0211dfff] PGTABLE
-[    0.000000] BRK [0x0211e000, 0x0211efff] PGTABLE
-[    0.000000] BRK [0x0211f000, 0x0211ffff] PGTABLE
-[    0.000000] BRK [0x02120000, 0x02120fff] PGTABLE
-[    0.000000] RAMDISK: [mem 0x36a0c000-0x374fdfff]
-[    0.000000] ACPI: Early table checksum verification disabled
-[    0.000000] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
-[    0.000000] ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
-[    0.000000] ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
-[    0.000000] ACPI: DSDT 0x00000000DFFF0470 0021FF (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
-[    0.000000] ACPI: FACS 0x00000000DFFF0200 000040
-[    0.000000] ACPI: FACS 0x00000000DFFF0200 000040
-[    0.000000] ACPI: APIC 0x00000000DFFF0240 00005C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
-[    0.000000] ACPI: SSDT 0x00000000DFFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
-[    0.000000] ACPI: Local APIC address 0xfee00000
-[    0.000000] No NUMA configuration found
-[    0.000000] Faking a node at [mem 0x0000000000000000-0x00000001263fffff]
-[    0.000000] NODE_DATA(0) allocated [mem 0x1263f8000-0x1263fbfff]
-[    0.000000] Zone ranges:
-[    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
-[    0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
-[    0.000000]   Normal   [mem 0x0000000100000000-0x00000001263fffff]
-[    0.000000] Movable zone start for each node
-[    0.000000] Early memory node ranges
-[    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009efff]
-[    0.000000]   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
-[    0.000000]   node   0: [mem 0x0000000100000000-0x00000001263fffff]
-[    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x00000001263fffff]
-[    0.000000] On node 0 totalpages: 1074062
-[    0.000000]   DMA zone: 64 pages used for memmap
-[    0.000000]   DMA zone: 21 pages reserved
-[    0.000000]   DMA zone: 3998 pages, LIFO batch:0
-[    0.000000]   DMA32 zone: 14272 pages used for memmap
-[    0.000000]   DMA32 zone: 913392 pages, LIFO batch:31
-[    0.000000]   Normal zone: 2448 pages used for memmap
-[    0.000000]   Normal zone: 156672 pages, LIFO batch:31
-[    0.000000] ACPI: PM-Timer IO Port: 0x4008
-[    0.000000] ACPI: Local APIC address 0xfee00000
-[    0.000000] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-23
-[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
-[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
-[    0.000000] ACPI: IRQ0 used by override.
-[    0.000000] ACPI: IRQ9 used by override.
-[    0.000000] Using ACPI (MADT) for SMP configuration information
-[    0.000000] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
-[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
-[    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
-[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
-[    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
-[    0.000000] e820: [mem 0xe0000000-0xfebfffff] available for PCI devices
-[    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
-[    0.000000] setup_percpu: NR_CPUS:64 nr_cpumask_bits:64 nr_cpu_ids:2 nr_node_ids:1
-[    0.000000] PERCPU: Embedded 32 pages/cpu @ffff880126000000 s90648 r8192 d32232 u1048576
-[    0.000000] pcpu-alloc: s90648 r8192 d32232 u1048576 alloc=1*2097152
-[    0.000000] pcpu-alloc: [0] 0 1 
-[    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 1057257
-[    0.000000] Policy zone: Normal
-[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.4.2 root=UUID=86dd3541-a580-4ec4-8da5-63d4b187b19f ro
-[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
-[    0.000000] Calgary: detecting Calgary via BIOS EBDA area
-[    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
-[    0.000000] Memory: 4133408K/4296248K available (8648K kernel code, 1140K rwdata, 2752K rodata, 1080K init, 924K bss, 162840K reserved, 0K cma-reserved)
-[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
-[    0.000000] Hierarchical RCU implementation.
-[    0.000000] 	Build-time adjustment of leaf fanout to 64.
-[    0.000000] 	RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=2.
-[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=2
-[    0.000000] NR_IRQS:4352 nr_irqs:440 16
-[    0.000000] Console: colour dummy device 80x25
-[    0.000000] console [tty0] enabled
-[    0.000000] tsc: Fast TSC calibration using PIT
-[    0.000000] tsc: Detected 3095.785 MHz processor
-[    0.000060] Calibrating delay loop (skipped), value calculated using timer frequency.. 6191.57 BogoMIPS (lpj=3095785)
-[    0.000065] pid_max: default: 32768 minimum: 301
-[    0.000070] ACPI: Core revision 20150930
-[    0.000666] ACPI: 2 ACPI AML tables successfully acquired and loaded
-[    0.000679] Security Framework initialized
-[    0.000683] SELinux:  Initializing.
-[    0.000688] SELinux:  Starting in permissive mode
-[    0.001070] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
-[    0.002662] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
-[    0.003123] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes)
-[    0.003130] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes)
-[    0.003252] Initializing cgroup subsys freezer
-[    0.003306] CPU: Physical Processor ID: 0
-[    0.003309] CPU: Processor Core ID: 0
-[    0.004069] mce: CPU supports 0 MCE banks
-[    0.004107] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
-[    0.004110] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
-[    0.006142] Freeing SMP alternatives memory: 32K (ffffffff8202c000 - ffffffff82034000)
-[    0.007096] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
-[    0.119498] smpboot: CPU0: Intel(R) Core(TM) i7-7920HQ CPU @ 3.10GHz (family: 0x6, model: 0x9e, stepping: 0x9)
-[    0.119641] Performance Events: unsupported p6 CPU model 158 no PMU driver, software events only.
-[    0.120029] x86: Booting SMP configuration:
-[    0.120032] .... node  #0, CPUs:      #1
-[    0.121185] mce: CPU supports 0 MCE banks
-[    0.123330] x86: Booted up 1 node, 2 CPUs
-[    0.123336] smpboot: Total of 2 processors activated (12383.14 BogoMIPS)
-[    0.123726] devtmpfs: initialized
-[    0.124079] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
-[    0.124092] kworker/u4:0 (17) used greatest stack depth: 15032 bytes left
-[    0.124183] RTC time:  2:44:53, date: 11/02/17
-[    0.124258] NET: Registered protocol family 16
-[    0.124608] kworker/u4:1 (23) used greatest stack depth: 14856 bytes left
-[    0.124668] kworker/u4:1 (31) used greatest stack depth: 14472 bytes left
-[    0.128981] cpuidle: using governor ladder
-[    0.132720] cpuidle: using governor menu
-[    0.132826] ACPI: bus type PCI registered
-[    0.133143] PCI: Using configuration type 1 for base access
-[    0.135782] kworker/u4:2 (168) used greatest stack depth: 14152 bytes left
-[    0.142438] ACPI: Added _OSI(Module Device)
-[    0.142444] ACPI: Added _OSI(Processor Device)
-[    0.142447] ACPI: Added _OSI(3.0 _SCP Extensions)
-[    0.142451] ACPI: Added _OSI(Processor Aggregator Device)
-[    0.142974] ACPI: Executed 1 blocks of module-level executable AML code
-[    0.144319] ACPI: Interpreter enabled
-[    0.144339] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20150930/hwxface-580)
-[    0.144345] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20150930/hwxface-580)
-[    0.144350] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S3_] (20150930/hwxface-580)
-[    0.144355] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S4_] (20150930/hwxface-580)
-[    0.144362] ACPI: (supports S0 S5)
-[    0.144365] ACPI: Using IOAPIC for interrupt routing
-[    0.144464] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
-[    0.148585] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
-[    0.148591] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
-[    0.148604] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
-[    0.148612] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
-[    0.148704] PCI host bridge to bus 0000:00
-[    0.148708] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
-[    0.148712] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
-[    0.148715] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
-[    0.148719] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xffdfffff window]
-[    0.148723] pci_bus 0000:00: root bus resource [bus 00-ff]
-[    0.148789] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
-[    0.149302] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
-[    0.149977] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
-[    0.150427] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
-[    0.150602] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
-[    0.150606] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
-[    0.150609] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
-[    0.150612] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
-[    0.150814] pci 0000:00:02.0: [80ee:beef] type 00 class 0x030000
-[    0.152301] pci 0000:00:02.0: reg 0x10: [mem 0xe0000000-0xe0ffffff pref]
-[    0.162725] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
-[    0.164210] pci 0000:00:03.0: reg 0x10: [mem 0xf0000000-0xf001ffff]
-[    0.167194] pci 0000:00:03.0: reg 0x18: [io  0xd010-0xd017]
-[    0.172880] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
-[    0.174313] pci 0000:00:04.0: reg 0x10: [io  0xd020-0xd03f]
-[    0.175907] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
-[    0.176808] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
-[    0.182641] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
-[    0.182745] pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
-[    0.182805] pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
-[    0.183282] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
-[    0.185027] pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
-[    0.192678] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
-[    0.193114] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
-[    0.193128] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
-[    0.193375] pci 0000:00:0b.0: [8086:265c] type 00 class 0x0c0320
-[    0.195029] pci 0000:00:0b.0: reg 0x10: [mem 0xf0805000-0xf0805fff]
-[    0.204426] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
-[    0.205481] pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
-[    0.208309] pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
-[    0.211173] pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
-[    0.212343] pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
-[    0.215194] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
-[    0.215319] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 10 *11)
-[    0.215398] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 9 *10 11)
-[    0.215462] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 *9 10 11)
-[    0.215625] ACPI: Enabled 2 GPEs in block 00 to 07
-[    0.215787] vgaarb: setting as boot device: PCI:0000:00:02.0
-[    0.215791] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
-[    0.215795] vgaarb: loaded
-[    0.215798] vgaarb: bridge control possible 0000:00:02.0
-[    0.215916] SCSI subsystem initialized
-[    0.216032] libata version 3.00 loaded.
-[    0.216110] ACPI: bus type USB registered
-[    0.216190] usbcore: registered new interface driver usbfs
-[    0.216218] usbcore: registered new interface driver hub
-[    0.216272] usbcore: registered new device driver usb
-[    0.216391] pps_core: LinuxPPS API ver. 1 registered
-[    0.216394] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
-[    0.216431] PTP clock support registered
-[    0.216571] Advanced Linux Sound Architecture Driver Initialized.
-[    0.216601] PCI: Using ACPI for IRQ routing
-[    0.216605] PCI: pci_cache_line_size set to 64 bytes
-[    0.216789] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
-[    0.216793] e820: reserve RAM buffer [mem 0xdfff0000-0xdfffffff]
-[    0.216795] e820: reserve RAM buffer [mem 0x126400000-0x127ffffff]
-[    0.217216] NetLabel: Initializing
-[    0.217219] NetLabel:  domain hash size = 128
-[    0.217222] NetLabel:  protocols = UNLABELED CIPSOv4
-[    0.217237] NetLabel:  unlabeled traffic allowed by default
-[    0.217387] clocksource: Switched to clocksource refined-jiffies
-[    0.221748] pnp: PnP ACPI init
-[    0.221813] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
-[    0.221884] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
-[    0.223019] pnp: PnP ACPI: found 2 devices
-[    0.229695] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
-[    0.229773] clocksource: Switched to clocksource acpi_pm
-[    0.229783] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
-[    0.229785] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
-[    0.229787] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
-[    0.229789] pci_bus 0000:00: resource 7 [mem 0xe0000000-0xffdfffff window]
-[    0.229808] NET: Registered protocol family 2
-[    0.229919] TCP established hash table entries: 65536 (order: 7, 524288 bytes)
-[    0.230006] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
-[    0.230102] TCP: Hash tables configured (established 65536 bind 65536)
-[    0.230122] UDP hash table entries: 4096 (order: 5, 131072 bytes)
-[    0.230144] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
-[    0.230180] NET: Registered protocol family 1
-[    0.230394] RPC: Registered named UNIX socket transport module.
-[    0.230397] RPC: Registered udp transport module.
-[    0.230399] RPC: Registered tcp transport module.
-[    0.230402] RPC: Registered tcp NFSv4.1 backchannel transport module.
-[    0.230408] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
-[    0.230434] pci 0000:00:01.0: Activating ISA DMA hang workarounds
-[    0.230463] pci 0000:00:02.0: Video device with shadowed ROM
-[    0.230863] PCI: CLS 64 bytes, default 64
-[    0.230897] Unpacking initramfs...
-[    0.347010] Freeing initrd memory: 11208K (ffff880036a0c000 - ffff8800374fe000)
-[    0.347058] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
-[    0.347062] software IO TLB [mem 0xdbff0000-0xdfff0000] (64MB) mapped at [ffff8800dbff0000-ffff8800dffeffff]
-[    0.347264] platform rtc_cmos: registered platform RTC device (no PNP device found)
-[    0.347539] Scanning for low memory corruption every 60 seconds
-[    0.347959] futex hash table entries: 512 (order: 3, 32768 bytes)
-[    0.347980] audit: initializing netlink subsys (disabled)
-[    0.347991] audit: type=2000 audit(1509590693.246:1): initialized
-[    0.348533] HugeTLB registered 2 MB page size, pre-allocated 0 pages
-[    0.351088] VFS: Disk quotas dquot_6.6.0
-[    0.351131] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
-[    0.351703] NFS: Registering the id_resolver key type
-[    0.351711] Key type id_resolver registered
-[    0.351713] Key type id_legacy registered
-[    0.351860] SELinux:  Registering netfilter hooks
-[    0.358598] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
-[    0.358604] io scheduler noop registered
-[    0.358608] io scheduler deadline registered
-[    0.358646] io scheduler cfq registered (default)
-[    0.358747] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
-[    0.359067] ACPI: AC Adapter [AC] (on-line)
-[    0.359136] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
-[    0.359142] ACPI: Power Button [PWRF]
-[    0.359238] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
-[    0.359242] ACPI: Sleep Button [SLPF]
-[    0.359346] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
-[    0.359403] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
-[    0.360329] ACPI: Battery Slot [BAT0] (battery present)
-[    0.360417] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
-[    0.360844] Non-volatile memory driver v1.3
-[    0.360885] Linux agpgart interface v0.103
-[    0.361010] [drm] Initialized drm 1.1.0 20060810
-[    0.362637] loop: module loaded
-[    0.363097] ahci 0000:00:0d.0: version 3.0
-[    0.363173] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
-[    0.363292] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
-[    0.363297] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
-[    0.363590] scsi host0: ahci
-[    0.363668] ata1: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
-[    0.363697] ata_piix 0000:00:01.1: version 2.13
-[    0.364029] scsi host1: ata_piix
-[    0.364177] scsi host2: ata_piix
-[    0.364205] ata2: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
-[    0.364208] ata3: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
-[    0.364251] e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
-[    0.364253] e100: Copyright(c) 1999-2006 Intel Corporation
-[    0.364263] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
-[    0.364266] e1000: Copyright (c) 1999-2006 Intel Corporation.
-[    0.516277] ata3.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
-[    0.516673] ata3.00: configured for UDMA/33
-[    0.667929] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
-[    0.668080] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
-[    0.668085] ata1.00: 54702080 sectors, multi 128: LBA48 NCQ (depth 31/32)
-[    0.668354] ata1.00: configured for UDMA/133
-[    0.671999] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
-[    0.672174] sd 0:0:0:0: [sda] 54702080 512-byte logical blocks: (28.0 GB/26.0 GiB)
-[    0.672221] sd 0:0:0:0: [sda] Write Protect is off
-[    0.672225] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
-[    0.672245] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
-[    0.672365] sd 0:0:0:0: Attached scsi generic sg0 type 0
-[    0.673892] scsi 2:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
-[    0.678978]  sda: sda1 sda2 < sda5 >
-[    0.679220] sd 0:0:0:0: [sda] Attached SCSI disk
-[    0.684569] sr 2:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
-[    0.684594] cdrom: Uniform CD-ROM driver Revision: 3.20
-[    0.684730] sr 2:0:0:0: Attached scsi CD-ROM sr0
-[    0.684946] sr 2:0:0:0: Attached scsi generic sg1 type 5
-[    0.719413] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:3d:eb:a8
-[    0.719423] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
-[    0.719447] sky2: driver version 1.30
-[    0.719607] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
-[    0.719612] ehci-pci: EHCI PCI platform driver
-[    0.720064] ehci-pci 0000:00:0b.0: EHCI Host Controller
-[    0.720210] ehci-pci 0000:00:0b.0: new USB bus registered, assigned bus number 1
-[    0.720392] ehci-pci 0000:00:0b.0: irq 19, io mem 0xf0805000
-[    0.725920] ehci-pci 0000:00:0b.0: USB 2.0 started, EHCI 1.00
-[    0.725981] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
-[    0.725987] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
-[    0.725993] usb usb1: Product: EHCI Host Controller
-[    0.725998] usb usb1: Manufacturer: Linux 4.4.2 ehci_hcd
-[    0.726001] usb usb1: SerialNumber: 0000:00:0b.0
-[    0.726269] hub 1-0:1.0: USB hub found
-[    0.726283] hub 1-0:1.0: 12 ports detected
-[    0.726486] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
-[    0.726498] ohci-pci: OHCI PCI platform driver
-[    0.727759] ohci-pci 0000:00:06.0: OHCI PCI host controller
-[    0.727881] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 2
-[    0.727881] ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
-[    0.744158] hrtimer: interrupt took 3984305 ns
-[    0.779224] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
-[    0.779231] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
-[    0.779236] usb usb2: Product: OHCI PCI host controller
-[    0.779239] usb usb2: Manufacturer: Linux 4.4.2 ohci_hcd
-[    0.779242] usb usb2: SerialNumber: 0000:00:06.0
-[    0.779503] hub 2-0:1.0: USB hub found
-[    0.779557] hub 2-0:1.0: 12 ports detected
-[    0.779999] uhci_hcd: USB Universal Host Controller Interface driver
-[    0.780026] usbcore: registered new interface driver usblp
-[    0.780040] usbcore: registered new interface driver usb-storage
-[    0.780063] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
-[    0.780445] serio: i8042 KBD port at 0x60,0x64 irq 1
-[    0.780452] serio: i8042 AUX port at 0x60,0x64 irq 12
-[    0.780632] mousedev: PS/2 mouse device common for all mice
-[    0.781004] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
-[    0.782016] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
-[    0.782063] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
-[    0.782179] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
-[    0.782208] hidraw: raw HID events driver (C) Jiri Kosina
-[    0.782341] usbcore: registered new interface driver usbhid
-[    0.782345] usbhid: USB HID core driver
-[    0.782539] Netfilter messages via NETLINK v0.30.
-[    0.782553] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
-[    0.782619] ctnetlink v0.93: registering with nfnetlink.
-[    0.782974] ip_tables: (C) 2000-2006 Netfilter Core Team
-[    0.782992] Initializing XFRM netlink socket
-[    0.783096] NET: Registered protocol family 10
-[    0.783384] ip6_tables: (C) 2000-2006 Netfilter Core Team
-[    0.783986] sit: IPv6 over IPv4 tunneling driver
-[    0.784084] NET: Registered protocol family 17
-[    0.784104] Key type dns_resolver registered
-[    0.784496] microcode: CPU0 sig=0x906e9, pf=0x8, revision=0x0
-[    0.784505] microcode: CPU1 sig=0x906e9, pf=0x8, revision=0x0
-[    0.784537] microcode: Microcode Update Driver: v2.01 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
-[    0.784650] registered taskstats version 1
-[    0.785194]   Magic number: 9:74:712
-[    0.785232] console [netcon0] enabled
-[    0.785235] netconsole: network logging started
-[    0.785277] PM: Hibernation image not present or could not be loaded.
-[    0.785280] ALSA device list:
-[    0.785282]   No soundcards found.
-[    0.786039] Freeing unused kernel memory: 1080K (ffffffff81f1e000 - ffffffff8202c000)
-[    0.786044] Write protecting the kernel read-only data: 14336k
-[    0.786608] Freeing unused kernel memory: 1580K (ffff880001875000 - ffff880001a00000)
-[    0.788985] Freeing unused kernel memory: 1344K (ffff880001cb0000 - ffff880001e00000)
-[    0.791543] init (946) used greatest stack depth: 14120 bytes left
-[    0.799888] random: systemd-udevd urandom read with 16 bits of entropy available
-[    0.811864] udevadm (963) used greatest stack depth: 13880 bytes left
-[    0.818812] e1000 0000:00:03.0 enp0s3: renamed from eth0
-[    0.878311] cdrom_id (980) used greatest stack depth: 13200 bytes left
-[    0.901146] ata_id (981) used greatest stack depth: 13136 bytes left
-[    0.981795] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
-[    1.148954] usb 2-1: new full-speed USB device number 2 using ohci-pci
-[    1.346959] tsc: Refined TSC clocksource calibration: 3096.001 MHz
-[    1.346967] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2ca085e1386, max_idle_ns: 440795294345 ns
-[    1.372439] usb 2-1: New USB device found, idVendor=80ee, idProduct=0021
-[    1.372447] usb 2-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
-[    1.372452] usb 2-1: Product: USB Tablet
-[    1.372456] usb 2-1: Manufacturer: VirtualBox
-[    1.391408] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.0/0003:80EE:0021.0001/input/input6
-[    1.391765] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
-[    2.015609] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
-[    2.204145] systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN)
-[    2.204178] systemd[1]: Detected virtualization oracle.
-[    2.204183] systemd[1]: Detected architecture x86-64.
-[    2.207169] systemd[1]: Set hostname to <csci3362-VirtualBox>.
-[    2.276663] random: nonblocking pool is initialized
-[    2.347475] clocksource: Switched to clocksource tsc
-[    2.378247] systemd[1]: Reached target Remote File Systems (Pre).
-[    2.378358] systemd[1]: Listening on LVM2 poll daemon socket.
-[    2.378405] systemd[1]: Listening on Journal Socket (/dev/log).
-[    2.378437] systemd[1]: Reached target Encrypted Volumes.
-[    2.378481] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
-[    2.378519] systemd[1]: Listening on fsck to fsckd communication Socket.
-[    2.378558] systemd[1]: Listening on LVM2 metadata daemon socket.
-[    2.378588] systemd[1]: Reached target Remote File Systems.
-[    2.378632] systemd[1]: Listening on udev Control Socket.
-[    2.378673] systemd[1]: Listening on Device-mapper event daemon FIFOs.
-[    2.378730] systemd[1]: Created slice System Slice.
-[    2.378787] systemd[1]: Listening on Journal Socket.
-[    2.384165] systemd[1]: Mounting Debug File System...
-[    2.384703] systemd[1]: Starting Set console keymap...
-[    2.385410] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
-[    2.387800] systemd[1]: Starting Load Kernel Modules...
-[    2.388136] systemd[1]: Mounting Huge Pages File System...
-[    2.388493] systemd[1]: Starting Uncomplicated firewall...
-[    2.388612] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
-[    2.388753] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
-[    2.390120] systemd[1]: Mounting POSIX Message Queue File System...
-[    2.390192] systemd[1]: Reached target User and Group Name Lookups.
-[    2.390271] systemd[1]: Created slice User and Session Slice.
-[    2.390372] systemd[1]: Listening on Journal Audit Socket.
-[    2.390428] systemd[1]: Listening on Syslog Socket.
-[    2.390724] systemd[1]: Starting Journal Service...
-[    2.390804] systemd[1]: Started Trigger resolvconf update for networkd DNS.
-[    2.390870] systemd[1]: Reached target Slices.
-[    2.391241] systemd[1]: Starting Create list of required static device nodes for the current kernel...
-[    2.391326] systemd[1]: Listening on udev Kernel Socket.
-[    2.424649] systemd[1]: systemd-modules-load.service: Main process exited, code=exited, status=1/FAILURE
-[    2.424858] systemd[1]: Failed to start Load Kernel Modules.
-[    2.425590] systemd[1]: systemd-modules-load.service: Unit entered failed state.
-[    2.425860] systemd[1]: systemd-modules-load.service: Failed with result 'exit-code'.
-[    2.430263] systemd[1]: Starting Apply Kernel Variables...
-[    2.439274] systemd[1]: Started Create list of required static device nodes for the current kernel.
-[    2.443144] systemd[1]: Starting Create Static Device Nodes in /dev...
-[    2.456482] systemd[1]: Started Apply Kernel Variables.
-[    2.468134] systemd[1]: Mounted POSIX Message Queue File System.
-[    2.468179] systemd[1]: Mounted Huge Pages File System.
-[    2.468201] systemd[1]: Mounted Debug File System.
-[    2.491056] systemd[1]: Started LVM2 metadata daemon.
-[    2.495343] systemd[1]: Started Journal Service.
-[    2.630903] EXT4-fs (sda1): re-mounted. Opts: errors=remount-ro
-[    2.663251] systemd-journald[1117]: Received request to flush runtime journal from PID 1
-[    2.713546] vgdrvHeartbeatInit: Setting up heartbeat to trigger every 2000 milliseconds
-[    2.713606] input: Unspecified device as /devices/pci0000:00/0000:00:04.0/input/input7
-[    2.713702] vboxguest: misc device minor 57, IRQ 20, I/O port d020, MMIO at 00000000f0400000 (size 0x400000)
-[    2.713705] vboxguest: Successfully loaded version 5.0.40_Ubuntu (interface 0x00010004)
-[    2.714245] vboxvideo: Unknown symbol ttm_bo_mmap (err 0)
-[    2.714256] vboxvideo: Unknown symbol ttm_bo_global_release (err 0)
-[    2.714260] vboxvideo: Unknown symbol ttm_pool_unpopulate (err 0)
-[    2.714265] vboxvideo: Unknown symbol ttm_bo_manager_func (err 0)
-[    2.714268] vboxvideo: Unknown symbol ttm_bo_global_init (err 0)
-[    2.714274] vboxvideo: Unknown symbol ttm_bo_device_release (err 0)
-[    2.714281] vboxvideo: Unknown symbol ttm_bo_kunmap (err 0)
-[    2.714285] vboxvideo: Unknown symbol ttm_bo_del_sub_from_lru (err 0)
-[    2.714290] vboxvideo: Unknown symbol ttm_bo_device_init (err 0)
-[    2.714292] vboxvideo: Unknown symbol ttm_bo_init_mm (err 0)
-[    2.714294] vboxvideo: Unknown symbol ttm_bo_dma_acc_size (err 0)
-[    2.714297] vboxvideo: Unknown symbol ttm_tt_init (err 0)
-[    2.714299] vboxvideo: Unknown symbol ttm_bo_kmap (err 0)
-[    2.714305] vboxvideo: Unknown symbol ttm_bo_add_to_lru (err 0)
-[    2.714307] vboxvideo: Unknown symbol ttm_bo_unref (err 0)
-[    2.714310] vboxvideo: Unknown symbol ttm_mem_global_release (err 0)
-[    2.714312] vboxvideo: Unknown symbol ttm_mem_global_init (err 0)
-[    2.714320] vboxvideo: Unknown symbol ttm_bo_init (err 0)
-[    2.714323] vboxvideo: Unknown symbol ttm_bo_validate (err 0)
-[    2.714327] vboxvideo: Unknown symbol ttm_bo_move_memcpy (err 0)
-[    2.714331] vboxvideo: Unknown symbol ttm_tt_fini (err 0)
-[    2.714333] vboxvideo: Unknown symbol ttm_pool_populate (err 0)
-[    2.905718] Adding 2095100k swap on /dev/sda5.  Priority:-1 extents:1 across:2095100k 
-[    3.034372] systemd-update- (1350) used greatest stack depth: 13096 bytes left
-[    3.152614] cgroup: new mount options do not match the existing superblock, will be ignored
-[    3.190224] start-ubiquity- (1452) used greatest stack depth: 12968 bytes left
-[    3.347168] vboxsf: Successfully loaded version 5.0.40_Ubuntu (interface 0x00010004)
-[    3.460671] VBoxService 5.1.28 r117968 (verbosity: 0) linux.amd64 (Sep 13 2017 11:07:52) release log
-               00:00:00.000069 main     Log opened 2017-11-02T02:44:56.358600000Z
-[    3.460721] 00:00:00.000155 main     OS Product: Linux
-[    3.460762] 00:00:00.000199 main     OS Release: 4.4.2
-[    3.460791] 00:00:00.000229 main     OS Version: #4 SMP Tue Aug 15 20:05:33 EDT 2017
-[    3.460839] 00:00:00.000258 main     Executable: /opt/VBoxGuestAdditions-5.1.28/sbin/VBoxService
-               00:00:00.000259 main     Process ID: 1584
-               00:00:00.000260 main     Package type: LINUX_64BITS_GENERIC
-[    3.462817] 00:00:00.002237 main     5.1.28 r117968 started. Verbose level = 0
-[    3.471202] 00:00:00.010589 automount vbsvcAutoMountWorker: Shared folder 'shared' was mounted to '/media/sf_shared'
-[    3.535387] cfg80211: World regulatory domain updated:
-[    3.535391] cfg80211:  DFS Master region: unset
-[    3.535393] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
-[    3.535395] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
-[    3.535397] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
-[    3.535399] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
-[    3.535401] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
-[    3.535403] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
-[    3.535405] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
-[    3.535407] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
-[    3.535408] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
-[    3.654149] vboxvideo: Unknown symbol ttm_bo_mmap (err 0)
-[    3.654177] vboxvideo: Unknown symbol ttm_bo_global_release (err 0)
-[    3.654182] vboxvideo: Unknown symbol ttm_pool_unpopulate (err 0)
-[    3.654187] vboxvideo: Unknown symbol ttm_bo_manager_func (err 0)
-[    3.654191] vboxvideo: Unknown symbol ttm_bo_global_init (err 0)
-[    3.654196] vboxvideo: Unknown symbol ttm_bo_device_release (err 0)
-[    3.654205] vboxvideo: Unknown symbol ttm_bo_kunmap (err 0)
-[    3.654208] vboxvideo: Unknown symbol ttm_bo_del_sub_from_lru (err 0)
-[    3.654213] vboxvideo: Unknown symbol ttm_bo_device_init (err 0)
-[    3.654215] vboxvideo: Unknown symbol ttm_bo_init_mm (err 0)
-[    3.654217] vboxvideo: Unknown symbol ttm_bo_dma_acc_size (err 0)
-[    3.654221] vboxvideo: Unknown symbol ttm_tt_init (err 0)
-[    3.654224] vboxvideo: Unknown symbol ttm_bo_kmap (err 0)
-[    3.654229] vboxvideo: Unknown symbol ttm_bo_add_to_lru (err 0)
-[    3.654232] vboxvideo: Unknown symbol ttm_bo_unref (err 0)
-[    3.654234] vboxvideo: Unknown symbol ttm_mem_global_release (err 0)
-[    3.654237] vboxvideo: Unknown symbol ttm_mem_global_init (err 0)
-[    3.654245] vboxvideo: Unknown symbol ttm_bo_init (err 0)
-[    3.654248] vboxvideo: Unknown symbol ttm_bo_validate (err 0)
-[    3.654252] vboxvideo: Unknown symbol ttm_bo_move_memcpy (err 0)
-[    3.654256] vboxvideo: Unknown symbol ttm_tt_fini (err 0)
-[    3.654258] vboxvideo: Unknown symbol ttm_pool_populate (err 0)
-[    3.700704] IPv6: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
-[    3.701993] IPv6: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
-[    3.702500] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
-[    3.702756] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
-[  226.985526] 
+[ 1258.647627] 
                 to start things off 
-[  226.985532] Process: systemd
+[ 1258.647633] Process: systemd
                        PID_Number: 1
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985537] Parent process: swapper/0,          PID_Number: 0
+[ 1258.647638] Parent process: swapper/0,          PID_Number: 0
 
-[  226.985540] 
+[ 1258.647640] 
                 after all the printks 
-[  226.985543] Process: kthreadd
+[ 1258.647644] Process: kthreadd
                        PID_Number: 2
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985547] Parent process: swapper/0,          PID_Number: 0
+[ 1258.647648] Parent process: swapper/0,          PID_Number: 0
 
-[  226.985549] 
+[ 1258.647650] 
                 after all the printks 
-[  226.985552] Process: ksoftirqd/0
+[ 1258.647653] Process: ksoftirqd/0
                        PID_Number: 3
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985556] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647657] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985558] 
+[ 1258.647659] 
                 after all the printks 
-[  226.985561] Process: kworker/0:0
-                       PID_Number: 4
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.985565] Parent process: kthreadd,          PID_Number: 2
-
-[  226.985567] 
-                after all the printks 
-[  226.985570] Process: kworker/0:0H
+[ 1258.647662] Process: kworker/0:0H
                        PID_Number: 5
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985574] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647666] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985576] 
+[ 1258.647668] 
                 after all the printks 
-[  226.985579] Process: kworker/u4:0
-                       PID_Number: 6
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.985583] Parent process: kthreadd,          PID_Number: 2
-
-[  226.985585] 
-                after all the printks 
-[  226.985588] Process: rcu_sched
+[ 1258.647671] Process: rcu_sched
                        PID_Number: 7
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985592] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647675] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985594] 
+[ 1258.647677] 
                 after all the printks 
-[  226.985597] Process: rcu_bh
+[ 1258.647680] Process: rcu_bh
                        PID_Number: 8
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985601] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647684] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985603] 
+[ 1258.647686] 
                 after all the printks 
-[  226.985606] Process: migration/0
+[ 1258.647689] Process: migration/0
                        PID_Number: 9
                        Process State: 1
                        Priority: 0
                        RT_Priority: 99
                        Static Priority: 120
                        Normal Priority: 0
-[  226.985610] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647693] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985612] 
+[ 1258.647695] 
                 after all the printks 
-[  226.985615] Process: migration/1
+[ 1258.647698] Process: migration/1
                        PID_Number: 10
                        Process State: 1
                        Priority: 0
                        RT_Priority: 99
                        Static Priority: 120
                        Normal Priority: 0
-[  226.985619] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647702] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985621] 
+[ 1258.647704] 
                 after all the printks 
-[  226.985624] Process: ksoftirqd/1
+[ 1258.647707] Process: ksoftirqd/1
                        PID_Number: 11
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985628] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647711] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985630] 
+[ 1258.647713] 
                 after all the printks 
-[  226.985633] Process: kworker/1:0
-                       PID_Number: 12
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.985637] Parent process: kthreadd,          PID_Number: 2
-
-[  226.985639] 
-                after all the printks 
-[  226.985642] Process: kworker/1:0H
+[ 1258.647716] Process: kworker/1:0H
                        PID_Number: 13
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985646] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647720] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985648] 
+[ 1258.647722] 
                 after all the printks 
-[  226.985651] Process: kdevtmpfs
+[ 1258.647725] Process: kdevtmpfs
                        PID_Number: 14
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985655] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647729] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985657] 
+[ 1258.647731] 
                 after all the printks 
-[  226.985660] Process: netns
+[ 1258.647734] Process: netns
                        PID_Number: 15
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985664] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647738] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985666] 
+[ 1258.647740] 
                 after all the printks 
-[  226.985669] Process: kworker/u4:1
+[ 1258.647743] Process: kworker/u4:1
                        PID_Number: 16
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985673] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647747] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985675] 
+[ 1258.647749] 
                 after all the printks 
-[  226.985678] Process: perf
+[ 1258.647752] Process: perf
                        PID_Number: 18
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985682] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647756] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985684] 
+[ 1258.647758] 
                 after all the printks 
-[  226.985687] Process: kworker/u4:2
-                       PID_Number: 20
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.985691] Parent process: kthreadd,          PID_Number: 2
-
-[  226.985693] 
-                after all the printks 
-[  226.985696] Process: writeback
-                       PID_Number: 374
+[ 1258.647761] Process: writeback
+                       PID_Number: 375
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985699] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647765] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985702] 
+[ 1258.647767] 
                 after all the printks 
-[  226.985705] Process: crypto
+[ 1258.647770] Process: crypto
                        PID_Number: 376
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985709] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647774] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985711] 
+[ 1258.647776] 
                 after all the printks 
-[  226.985714] Process: bioset
-                       PID_Number: 377
+[ 1258.647779] Process: bioset
+                       PID_Number: 378
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985717] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647783] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985719] 
+[ 1258.647785] 
                 after all the printks 
-[  226.985722] Process: kblockd
+[ 1258.647788] Process: kblockd
                        PID_Number: 379
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985726] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647792] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985728] 
+[ 1258.647794] 
                 after all the printks 
-[  226.985731] Process: ata_sff
-                       PID_Number: 438
+[ 1258.647797] Process: ata_sff
+                       PID_Number: 439
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985735] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647801] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985737] 
+[ 1258.647803] 
                 after all the printks 
-[  226.985740] Process: md
-                       PID_Number: 458
+[ 1258.647806] Process: md
+                       PID_Number: 459
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985744] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647810] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985746] 
+[ 1258.647812] 
                 after all the printks 
-[  226.985749] Process: kworker/1:1
-                       PID_Number: 469
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.985753] Parent process: kthreadd,          PID_Number: 2
-
-[  226.985755] 
-                after all the printks 
-[  226.985758] Process: cfg80211
-                       PID_Number: 470
+[ 1258.647815] Process: cfg80211
+                       PID_Number: 471
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985762] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647819] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985764] 
+[ 1258.647821] 
                 after all the printks 
-[  226.985767] Process: rpciod
-                       PID_Number: 561
+[ 1258.647824] Process: rpciod
+                       PID_Number: 562
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985771] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647828] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985773] 
+[ 1258.647830] 
                 after all the printks 
-[  226.985776] Process: kswapd0
-                       PID_Number: 585
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.985780] Parent process: kthreadd,          PID_Number: 2
-
-[  226.985782] 
-                after all the printks 
-[  226.985785] Process: vmstat
+[ 1258.647834] Process: kswapd0
                        PID_Number: 586
                        Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.647837] Parent process: kthreadd,          PID_Number: 2
+
+[ 1258.647840] 
+                after all the printks 
+[ 1258.647842] Process: vmstat
+                       PID_Number: 587
+                       Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985789] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647846] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985791] 
+[ 1258.647848] 
                 after all the printks 
-[  226.985794] Process: fsnotify_mark
-                       PID_Number: 661
+[ 1258.647852] Process: fsnotify_mark
+                       PID_Number: 662
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985798] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647856] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985800] 
+[ 1258.647858] 
                 after all the printks 
-[  226.985803] Process: nfsiod
-                       PID_Number: 676
+[ 1258.647861] Process: nfsiod
+                       PID_Number: 677
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985807] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647865] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985809] 
+[ 1258.647867] 
                 after all the printks 
-[  226.985819] Process: acpi_thermal_pm
-                       PID_Number: 725
+[ 1258.647870] Process: acpi_thermal_pm
+                       PID_Number: 726
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985823] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647874] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985825] 
+[ 1258.647876] 
                 after all the printks 
-[  226.985828] Process: bioset
-                       PID_Number: 748
+[ 1258.647879] Process: bioset
+                       PID_Number: 749
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985831] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647883] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985834] 
+[ 1258.647885] 
                 after all the printks 
-[  226.985837] Process: bioset
-                       PID_Number: 751
+[ 1258.647888] Process: bioset
+                       PID_Number: 752
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985840] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647892] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985843] 
+[ 1258.647894] 
                 after all the printks 
-[  226.985845] Process: bioset
+[ 1258.647897] Process: bioset
                        PID_Number: 754
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985849] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647901] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985851] 
+[ 1258.647903] 
                 after all the printks 
-[  226.985854] Process: bioset
+[ 1258.647906] Process: bioset
                        PID_Number: 757
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985858] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647910] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985860] 
+[ 1258.647912] 
                 after all the printks 
-[  226.985863] Process: bioset
+[ 1258.647915] Process: bioset
                        PID_Number: 760
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985867] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647919] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985869] 
+[ 1258.647921] 
                 after all the printks 
-[  226.985872] Process: bioset
+[ 1258.647924] Process: bioset
                        PID_Number: 763
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985876] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647928] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985878] 
+[ 1258.647930] 
                 after all the printks 
-[  226.985881] Process: bioset
+[ 1258.647933] Process: bioset
                        PID_Number: 766
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985885] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647937] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985887] 
+[ 1258.647939] 
                 after all the printks 
-[  226.985890] Process: bioset
+[ 1258.647942] Process: bioset
                        PID_Number: 769
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985894] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647945] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985896] 
+[ 1258.647948] 
                 after all the printks 
-[  226.985899] Process: scsi_eh_0
-                       PID_Number: 781
+[ 1258.647951] Process: scsi_eh_0
+                       PID_Number: 772
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985903] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647954] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985905] 
+[ 1258.647957] 
                 after all the printks 
-[  226.985908] Process: scsi_tmf_0
-                       PID_Number: 782
+[ 1258.647960] Process: scsi_tmf_0
+                       PID_Number: 783
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.985912] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647964] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985914] 
+[ 1258.647966] 
                 after all the printks 
-[  226.985915] Process: kworker/u4:3
-                       PID_Number: 789
+[ 1258.647969] Process: scsi_eh_1
+                       PID_Number: 795
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.985988] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647973] Parent process: kthreadd,          PID_Number: 2
 
-[  226.985990] 
+[ 1258.647975] 
                 after all the printks 
-[  226.985993] Process: scsi_eh_1
-                       PID_Number: 794
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.985997] Parent process: kthreadd,          PID_Number: 2
-
-[  226.985999] 
-                after all the printks 
-[  226.986004] Process: scsi_tmf_1
+[ 1258.647978] Process: scsi_tmf_1
                        PID_Number: 796
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986008] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647982] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986010] 
+[ 1258.647984] 
                 after all the printks 
-[  226.986013] Process: scsi_eh_2
+[ 1258.647987] Process: scsi_eh_2
                        PID_Number: 797
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986017] Parent process: kthreadd,          PID_Number: 2
+[ 1258.647991] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986019] 
+[ 1258.647993] 
                 after all the printks 
-[  226.986022] Process: scsi_tmf_2
+[ 1258.647996] Process: scsi_tmf_2
                        PID_Number: 800
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986026] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648000] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986028] 
+[ 1258.648002] 
                 after all the printks 
-[  226.986031] Process: kworker/u4:4
-                       PID_Number: 802
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986035] Parent process: kthreadd,          PID_Number: 2
-
-[  226.986037] 
-                after all the printks 
-[  226.986040] Process: kworker/u4:5
-                       PID_Number: 810
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986044] Parent process: kthreadd,          PID_Number: 2
-
-[  226.986046] 
-                after all the printks 
-[  226.986049] Process: kworker/0:1
+[ 1258.648005] Process: bioset
                        PID_Number: 813
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986053] Parent process: kthreadd,          PID_Number: 2
-
-[  226.986055] 
-                after all the printks 
-[  226.986058] Process: bioset
-                       PID_Number: 814
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986061] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648009] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986063] 
+[ 1258.648011] 
                 after all the printks 
-[  226.986066] Process: bioset
+[ 1258.648014] Process: kworker/u4:5
+                       PID_Number: 817
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648018] Parent process: kthreadd,          PID_Number: 2
+
+[ 1258.648020] 
+                after all the printks 
+[ 1258.648023] Process: bioset
                        PID_Number: 822
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986070] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648027] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986072] 
+[ 1258.648029] 
                 after all the printks 
-[  226.986076] Process: kworker/0:2
-                       PID_Number: 832
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986079] Parent process: kthreadd,          PID_Number: 2
-
-[  226.986082] 
-                after all the printks 
-[  226.986084] Process: kpsmoused
-                       PID_Number: 875
+[ 1258.648032] Process: kpsmoused
+                       PID_Number: 868
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986088] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648036] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986090] 
+[ 1258.648038] 
                 after all the printks 
-[  226.986093] Process: kworker/1:2
-                       PID_Number: 914
+[ 1258.648041] Process: kworker/0:2
+                       PID_Number: 871
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986097] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648045] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986099] 
+[ 1258.648047] 
                 after all the printks 
-[  226.986102] Process: ipv6_addrconf
+[ 1258.648050] Process: ipv6_addrconf
                        PID_Number: 923
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986106] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648054] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986108] 
+[ 1258.648056] 
                 after all the printks 
-[  226.986111] Process: deferwq
-                       PID_Number: 938
+[ 1258.648059] Process: deferwq
+                       PID_Number: 937
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986115] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648063] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986117] 
+[ 1258.648065] 
                 after all the printks 
-[  226.986120] Process: kworker/1:3
-                       PID_Number: 939
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986124] Parent process: kthreadd,          PID_Number: 2
-
-[  226.986126] 
-                after all the printks 
-[  226.986129] Process: kworker/0:1H
+[ 1258.648068] Process: kworker/1:1H
                        PID_Number: 979
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986133] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648072] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986135] 
+[ 1258.648074] 
                 after all the printks 
-[  226.986138] Process: kworker/1:1H
-                       PID_Number: 1047
+[ 1258.648077] Process: kworker/0:1H
+                       PID_Number: 981
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986142] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648081] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986144] 
+[ 1258.648083] 
                 after all the printks 
-[  226.986147] Process: jbd2/sda1-8
+[ 1258.648086] Process: jbd2/sda1-8
                        PID_Number: 1074
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986151] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648090] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986153] 
+[ 1258.648092] 
                 after all the printks 
-[  226.986156] Process: ext4-rsv-conver
+[ 1258.648095] Process: ext4-rsv-conver
                        PID_Number: 1075
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986160] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648099] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986162] 
+[ 1258.648101] 
                 after all the printks 
-[  226.986165] Process: systemd-journal
-                       PID_Number: 1117
-                       Process State: 0
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986169] Parent process: systemd,          PID_Number: 1
-
-[  226.986171] 
-                after all the printks 
-[  226.986174] Process: kauditd
-                       PID_Number: 1120
+[ 1258.648104] Process: systemd-journal
+                       PID_Number: 1109
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986178] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648108] Parent process: systemd,          PID_Number: 1
 
-[  226.986180] 
+[ 1258.648110] 
                 after all the printks 
-[  226.986183] Process: lvmetad
-                       PID_Number: 1131
+[ 1258.648113] Process: kauditd
+                       PID_Number: 1119
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986187] Parent process: systemd,          PID_Number: 1
+[ 1258.648117] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986189] 
+[ 1258.648119] 
                 after all the printks 
-[  226.986192] Process: systemd-udevd
-                       PID_Number: 1154
+[ 1258.648122] Process: kworker/1:3
+                       PID_Number: 1122
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986196] Parent process: systemd,          PID_Number: 1
+[ 1258.648126] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986198] 
+[ 1258.648128] 
                 after all the printks 
-[  226.986201] Process: kworker/0:3
-                       PID_Number: 1190
+[ 1258.648131] Process: lvmetad
+                       PID_Number: 1155
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986205] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648135] Parent process: systemd,          PID_Number: 1
 
-[  226.986207] 
+[ 1258.648137] 
                 after all the printks 
-[  226.986210] Process: iprt-VBoxWQueue
-                       PID_Number: 1212
+[ 1258.648140] Process: systemd-udevd
+                       PID_Number: 1157
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648144] Parent process: systemd,          PID_Number: 1
+
+[ 1258.648146] 
+                after all the printks 
+[ 1258.648149] Process: iprt-VBoxWQueue
+                       PID_Number: 1239
                        Process State: 1
                        Priority: 100
                        RT_Priority: 0
                        Static Priority: 100
                        Normal Priority: 100
-[  226.986214] Parent process: kthreadd,          PID_Number: 2
+[ 1258.648153] Parent process: kthreadd,          PID_Number: 2
 
-[  226.986216] 
+[ 1258.648155] 
                 after all the printks 
-[  226.986219] Process: cupsd
-                       PID_Number: 1411
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986223] Parent process: systemd,          PID_Number: 1
-
-[  226.986225] 
-                after all the printks 
-[  226.986228] Process: dbus-daemon
-                       PID_Number: 1413
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986232] Parent process: systemd,          PID_Number: 1
-
-[  226.986234] 
-                after all the printks 
-[  226.986237] Process: accounts-daemon
-                       PID_Number: 1419
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986241] Parent process: systemd,          PID_Number: 1
-
-[  226.986243] 
-                after all the printks 
-[  226.986246] Process: avahi-daemon
-                       PID_Number: 1420
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986250] Parent process: systemd,          PID_Number: 1
-
-[  226.986252] 
-                after all the printks 
-[  226.986255] Process: cgmanager
+[ 1258.648159] Process: cupsd
                        PID_Number: 1422
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986259] Parent process: systemd,          PID_Number: 1
+[ 1258.648162] Parent process: systemd,          PID_Number: 1
 
-[  226.986261] 
+[ 1258.648165] 
                 after all the printks 
-[  226.986264] Process: NetworkManager
-                       PID_Number: 1426
+[ 1258.648167] Process: cgmanager
+                       PID_Number: 1424
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986268] Parent process: systemd,          PID_Number: 1
+[ 1258.648171] Parent process: systemd,          PID_Number: 1
 
-[  226.986270] 
+[ 1258.648173] 
                 after all the printks 
-[  226.986273] Process: cron
-                       PID_Number: 1448
+[ 1258.648176] Process: cron
+                       PID_Number: 1428
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986277] Parent process: systemd,          PID_Number: 1
+[ 1258.648180] Parent process: systemd,          PID_Number: 1
 
-[  226.986279] 
+[ 1258.648182] 
                 after all the printks 
-[  226.986282] Process: avahi-daemon
-                       PID_Number: 1449
+[ 1258.648185] Process: rsyslogd
+                       PID_Number: 1433
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986286] Parent process: avahi-daemon,          PID_Number: 1420
+[ 1258.648189] Parent process: systemd,          PID_Number: 1
 
-[  226.986288] 
+[ 1258.648191] 
                 after all the printks 
-[  226.986291] Process: systemd-logind
-                       PID_Number: 1451
+[ 1258.648194] Process: acpid
+                       PID_Number: 1437
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986295] Parent process: systemd,          PID_Number: 1
+[ 1258.648198] Parent process: systemd,          PID_Number: 1
 
-[  226.986297] 
+[ 1258.648200] 
                 after all the printks 
-[  226.986300] Process: ModemManager
-                       PID_Number: 1456
+[ 1258.648203] Process: ModemManager
+                       PID_Number: 1440
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986304] Parent process: systemd,          PID_Number: 1
+[ 1258.648207] Parent process: systemd,          PID_Number: 1
 
-[  226.986306] 
+[ 1258.648209] 
                 after all the printks 
-[  226.986309] Process: rsyslogd
-                       PID_Number: 1457
+[ 1258.648212] Process: accounts-daemon
+                       PID_Number: 1441
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986313] Parent process: systemd,          PID_Number: 1
+[ 1258.648216] Parent process: systemd,          PID_Number: 1
 
-[  226.986315] 
+[ 1258.648218] 
                 after all the printks 
-[  226.986318] Process: acpid
-                       PID_Number: 1464
+[ 1258.648221] Process: dbus-daemon
+                       PID_Number: 1442
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986322] Parent process: systemd,          PID_Number: 1
+[ 1258.648225] Parent process: systemd,          PID_Number: 1
 
-[  226.986324] 
+[ 1258.648227] 
                 after all the printks 
-[  226.986327] Process: cups-browsed
-                       PID_Number: 1480
+[ 1258.648230] Process: NetworkManager
+                       PID_Number: 1506
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986330] Parent process: systemd,          PID_Number: 1
+[ 1258.648234] Parent process: systemd,          PID_Number: 1
 
-[  226.986332] 
+[ 1258.648236] 
                 after all the printks 
-[  226.986335] Process: polkitd
-                       PID_Number: 1539
+[ 1258.648296] Process: avahi-daemon
+                       PID_Number: 1507
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986339] Parent process: systemd,          PID_Number: 1
+[ 1258.648300] Parent process: systemd,          PID_Number: 1
 
-[  226.986341] 
+[ 1258.648302] 
                 after all the printks 
-[  226.986344] Process: VBoxService
-                       PID_Number: 1610
+[ 1258.648305] Process: systemd-logind
+                       PID_Number: 1508
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986348] Parent process: systemd,          PID_Number: 1
+[ 1258.648309] Parent process: systemd,          PID_Number: 1
 
-[  226.986350] 
+[ 1258.648312] 
                 after all the printks 
-[  226.986353] Process: console-kit-dae
-                       PID_Number: 1629
+[ 1258.648315] Process: avahi-daemon
+                       PID_Number: 1530
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986357] Parent process: systemd,          PID_Number: 1
+[ 1258.648319] Parent process: avahi-daemon,          PID_Number: 1507
 
-[  226.986359] 
+[ 1258.648321] 
                 after all the printks 
-[  226.986362] Process: irqbalance
-                       PID_Number: 1643
+[ 1258.648324] Process: cups-browsed
+                       PID_Number: 1531
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986366] Parent process: systemd,          PID_Number: 1
+[ 1258.648328] Parent process: systemd,          PID_Number: 1
 
-[  226.986368] 
+[ 1258.648331] 
                 after all the printks 
-[  226.986371] Process: dhclient
-                       PID_Number: 1787
+[ 1258.648335] Process: irqbalance
+                       PID_Number: 1565
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986375] Parent process: NetworkManager,          PID_Number: 1426
+[ 1258.648339] Parent process: systemd,          PID_Number: 1
 
-[  226.986377] 
+[ 1258.648341] 
                 after all the printks 
-[  226.986380] Process: dnsmasq
-                       PID_Number: 1807
+[ 1258.648345] Process: VBoxService
+                       PID_Number: 1581
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986384] Parent process: NetworkManager,          PID_Number: 1426
+[ 1258.648349] Parent process: systemd,          PID_Number: 1
 
-[  226.986386] 
+[ 1258.648351] 
                 after all the printks 
-[  226.986389] Process: lightdm
-                       PID_Number: 1833
+[ 1258.648356] Process: polkitd
+                       PID_Number: 1591
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986393] Parent process: systemd,          PID_Number: 1
+[ 1258.648374] Parent process: systemd,          PID_Number: 1
 
-[  226.986395] 
+[ 1258.648386] 
                 after all the printks 
-[  226.986398] Process: Xorg
-                       PID_Number: 1869
+[ 1258.648395] Process: console-kit-dae
+                       PID_Number: 1596
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986402] Parent process: lightdm,          PID_Number: 1833
+[ 1258.648405] Parent process: systemd,          PID_Number: 1
 
-[  226.986404] 
+[ 1258.648418] 
                 after all the printks 
-[  226.986407] Process: rtkit-daemon
-                       PID_Number: 1945
+[ 1258.648428] Process: dhclient
+                       PID_Number: 1803
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648437] Parent process: NetworkManager,          PID_Number: 1506
+
+[ 1258.648451] 
+                after all the printks 
+[ 1258.648459] Process: dnsmasq
+                       PID_Number: 1825
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648466] Parent process: NetworkManager,          PID_Number: 1506
+
+[ 1258.648478] 
+                after all the printks 
+[ 1258.648486] Process: lightdm
+                       PID_Number: 1850
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648496] Parent process: systemd,          PID_Number: 1
+
+[ 1258.648506] 
+                after all the printks 
+[ 1258.648515] Process: Xorg
+                       PID_Number: 1888
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648523] Parent process: lightdm,          PID_Number: 1850
+
+[ 1258.648525] 
+                after all the printks 
+[ 1258.648528] Process: rtkit-daemon
+                       PID_Number: 1961
                        Process State: 1
                        Priority: 121
                        RT_Priority: 0
                        Static Priority: 121
                        Normal Priority: 121
-[  226.986411] Parent process: systemd,          PID_Number: 1
+[ 1258.648533] Parent process: systemd,          PID_Number: 1
 
-[  226.986413] 
+[ 1258.648535] 
                 after all the printks 
-[  226.986416] Process: lightdm
-                       PID_Number: 1950
+[ 1258.648538] Process: lightdm
+                       PID_Number: 1962
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986420] Parent process: lightdm,          PID_Number: 1833
+[ 1258.648542] Parent process: lightdm,          PID_Number: 1850
 
-[  226.986422] 
+[ 1258.648544] 
                 after all the printks 
-[  226.986425] Process: agetty
-                       PID_Number: 2011
+[ 1258.648548] Process: systemd
+                       PID_Number: 1973
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986429] Parent process: systemd,          PID_Number: 1
+[ 1258.648552] Parent process: systemd,          PID_Number: 1
 
-[  226.986431] 
+[ 1258.648554] 
                 after all the printks 
-[  226.986434] Process: ntpd
-                       PID_Number: 2028
+[ 1258.648558] Process: (sd-pam)
+                       PID_Number: 1974
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986438] Parent process: systemd,          PID_Number: 1
+[ 1258.648563] Parent process: systemd,          PID_Number: 1973
 
-[  226.986440] 
+[ 1258.648565] 
                 after all the printks 
-[  226.986443] Process: nmbd
-                       PID_Number: 2044
+[ 1258.648568] Process: gnome-keyring-d
+                       PID_Number: 1979
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986447] Parent process: systemd,          PID_Number: 1
+[ 1258.648573] Parent process: systemd,          PID_Number: 1
 
-[  226.986449] 
+[ 1258.648575] 
                 after all the printks 
-[  226.986452] Process: smbd
-                       PID_Number: 2061
+[ 1258.648579] Process: upstart
+                       PID_Number: 1981
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986456] Parent process: systemd,          PID_Number: 1
+[ 1258.648583] Parent process: lightdm,          PID_Number: 1962
 
-[  226.986458] 
+[ 1258.648586] 
                 after all the printks 
-[  226.986461] Process: smbd
-                       PID_Number: 2063
+[ 1258.648589] Process: VBoxClient
+                       PID_Number: 1995
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986465] Parent process: smbd,          PID_Number: 2061
+[ 1258.648593] Parent process: systemd,          PID_Number: 1
 
-[  226.986467] 
+[ 1258.648596] 
                 after all the printks 
-[  226.986470] Process: smbd
-                       PID_Number: 2067
+[ 1258.648599] Process: VBoxClient
+                       PID_Number: 1997
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986474] Parent process: smbd,          PID_Number: 2061
+[ 1258.648604] Parent process: VBoxClient,          PID_Number: 1995
 
-[  226.986476] 
+[ 1258.648606] 
                 after all the printks 
-[  226.986479] Process: systemd
-                       PID_Number: 2138
+[ 1258.648610] Process: VBoxClient
+                       PID_Number: 2006
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986483] Parent process: systemd,          PID_Number: 1
+[ 1258.648614] Parent process: systemd,          PID_Number: 1
 
-[  226.986485] 
+[ 1258.648617] 
                 after all the printks 
-[  226.986488] Process: (sd-pam)
-                       PID_Number: 2139
+[ 1258.648620] Process: VBoxClient
+                       PID_Number: 2007
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986491] Parent process: systemd,          PID_Number: 2138
+[ 1258.648624] Parent process: VBoxClient,          PID_Number: 2006
 
-[  226.986493] 
+[ 1258.648627] 
                 after all the printks 
-[  226.986497] Process: gnome-keyring-d
-                       PID_Number: 2144
+[ 1258.648630] Process: VBoxClient
+                       PID_Number: 2010
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986500] Parent process: systemd,          PID_Number: 1
+[ 1258.648635] Parent process: systemd,          PID_Number: 1
 
-[  226.986502] 
+[ 1258.648637] 
                 after all the printks 
-[  226.986506] Process: upstart
-                       PID_Number: 2146
+[ 1258.648641] Process: VBoxClient
+                       PID_Number: 2012
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986509] Parent process: lightdm,          PID_Number: 1950
+[ 1258.648645] Parent process: VBoxClient,          PID_Number: 2010
 
-[  226.986512] 
+[ 1258.648647] 
                 after all the printks 
-[  226.986515] Process: VBoxClient
+[ 1258.648651] Process: VBoxClient
+                       PID_Number: 2019
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648655] Parent process: systemd,          PID_Number: 1
+
+[ 1258.648657] 
+                after all the printks 
+[ 1258.648661] Process: VBoxClient
+                       PID_Number: 2021
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648665] Parent process: VBoxClient,          PID_Number: 2019
+
+[ 1258.648667] 
+                after all the printks 
+[ 1258.648671] Process: upstart-udev-br
+                       PID_Number: 2125
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648675] Parent process: upstart,          PID_Number: 1981
+
+[ 1258.648678] 
+                after all the printks 
+[ 1258.648681] Process: dbus-daemon
+                       PID_Number: 2126
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648686] Parent process: upstart,          PID_Number: 1981
+
+[ 1258.648688] 
+                after all the printks 
+[ 1258.648692] Process: upstart-dbus-br
+                       PID_Number: 2149
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648696] Parent process: upstart,          PID_Number: 1981
+
+[ 1258.648699] 
+                after all the printks 
+[ 1258.648708] Process: upstart-dbus-br
+                       PID_Number: 2151
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648713] Parent process: upstart,          PID_Number: 1981
+
+[ 1258.648715] 
+                after all the printks 
+[ 1258.648719] Process: upstart-file-br
                        PID_Number: 2160
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986518] Parent process: systemd,          PID_Number: 1
+[ 1258.648723] Parent process: upstart,          PID_Number: 1981
 
-[  226.986520] 
+[ 1258.648726] 
                 after all the printks 
-[  226.986523] Process: VBoxClient
-                       PID_Number: 2162
+[ 1258.648729] Process: sh
+                       PID_Number: 2182
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986527] Parent process: VBoxClient,          PID_Number: 2160
+[ 1258.648734] Parent process: upstart,          PID_Number: 1981
 
-[  226.986529] 
+[ 1258.648736] 
                 after all the printks 
-[  226.986533] Process: VBoxClient
-                       PID_Number: 2170
+[ 1258.648740] Process: xfce4-session
+                       PID_Number: 2193
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986536] Parent process: systemd,          PID_Number: 1
+[ 1258.648744] Parent process: sh,          PID_Number: 2182
 
-[  226.986538] 
+[ 1258.648746] 
                 after all the printks 
-[  226.986541] Process: VBoxClient
-                       PID_Number: 2172
+[ 1258.648750] Process: xfconfd
+                       PID_Number: 2197
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986545] Parent process: VBoxClient,          PID_Number: 2170
+[ 1258.648755] Parent process: upstart,          PID_Number: 1981
 
-[  226.986547] 
+[ 1258.648757] 
                 after all the printks 
-[  226.986550] Process: VBoxClient
-                       PID_Number: 2175
+[ 1258.648760] Process: ssh-agent
+                       PID_Number: 2201
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986554] Parent process: systemd,          PID_Number: 1
+[ 1258.648765] Parent process: upstart,          PID_Number: 1981
 
-[  226.986556] 
+[ 1258.648768] 
                 after all the printks 
-[  226.986559] Process: VBoxClient
-                       PID_Number: 2178
+[ 1258.648771] Process: xfwm4
+                       PID_Number: 2203
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986563] Parent process: VBoxClient,          PID_Number: 2175
+[ 1258.648775] Parent process: upstart,          PID_Number: 1981
 
-[  226.986565] 
+[ 1258.648778] 
                 after all the printks 
-[  226.986568] Process: VBoxClient
-                       PID_Number: 2183
+[ 1258.648781] Process: xfce4-panel
+                       PID_Number: 2207
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986572] Parent process: systemd,          PID_Number: 1
+[ 1258.648785] Parent process: upstart,          PID_Number: 1981
 
-[  226.986574] 
+[ 1258.648788] 
                 after all the printks 
-[  226.986577] Process: VBoxClient
-                       PID_Number: 2185
+[ 1258.648791] Process: Thunar
+                       PID_Number: 2209
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986581] Parent process: VBoxClient,          PID_Number: 2183
+[ 1258.648796] Parent process: upstart,          PID_Number: 1981
 
-[  226.986583] 
+[ 1258.648798] 
                 after all the printks 
-[  226.986586] Process: upstart-udev-br
-                       PID_Number: 2290
+[ 1258.648802] Process: xfdesktop
+                       PID_Number: 2211
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986590] Parent process: upstart,          PID_Number: 2146
+[ 1258.648806] Parent process: upstart,          PID_Number: 1981
 
-[  226.986592] 
+[ 1258.648808] 
                 after all the printks 
-[  226.986595] Process: dbus-daemon
-                       PID_Number: 2291
+[ 1258.648812] Process: xfsettingsd
+                       PID_Number: 2212
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986599] Parent process: upstart,          PID_Number: 2146
+[ 1258.648816] Parent process: upstart,          PID_Number: 1981
 
-[  226.986601] 
+[ 1258.648819] 
                 after all the printks 
-[  226.986604] Process: upstart-dbus-br
-                       PID_Number: 2308
+[ 1258.648822] Process: gvfsd
+                       PID_Number: 2219
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986608] Parent process: upstart,          PID_Number: 2146
+[ 1258.648827] Parent process: upstart,          PID_Number: 1981
 
-[  226.986610] 
+[ 1258.648829] 
                 after all the printks 
-[  226.986613] Process: upstart-dbus-br
-                       PID_Number: 2314
+[ 1258.648832] Process: gvfsd-network
+                       PID_Number: 2228
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986617] Parent process: upstart,          PID_Number: 2146
+[ 1258.648837] Parent process: upstart,          PID_Number: 1981
 
-[  226.986619] 
+[ 1258.648839] 
                 after all the printks 
-[  226.986622] Process: upstart-file-br
-                       PID_Number: 2317
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986626] Parent process: upstart,          PID_Number: 2146
-
-[  226.986628] 
-                after all the printks 
-[  226.986631] Process: sh
-                       PID_Number: 2347
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986635] Parent process: upstart,          PID_Number: 2146
-
-[  226.986637] 
-                after all the printks 
-[  226.986640] Process: xfce4-session
-                       PID_Number: 2358
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986644] Parent process: sh,          PID_Number: 2347
-
-[  226.986646] 
-                after all the printks 
-[  226.986649] Process: xfconfd
-                       PID_Number: 2362
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986652] Parent process: upstart,          PID_Number: 2146
-
-[  226.986654] 
-                after all the printks 
-[  226.986657] Process: ssh-agent
-                       PID_Number: 2366
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986661] Parent process: upstart,          PID_Number: 2146
-
-[  226.986663] 
-                after all the printks 
-[  226.986666] Process: xfwm4
-                       PID_Number: 2368
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986670] Parent process: upstart,          PID_Number: 2146
-
-[  226.986672] 
-                after all the printks 
-[  226.986675] Process: xfce4-panel
-                       PID_Number: 2372
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986679] Parent process: upstart,          PID_Number: 2146
-
-[  226.986681] 
-                after all the printks 
-[  226.986684] Process: Thunar
-                       PID_Number: 2374
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986688] Parent process: upstart,          PID_Number: 2146
-
-[  226.986690] 
-                after all the printks 
-[  226.986693] Process: xfdesktop
-                       PID_Number: 2376
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986697] Parent process: upstart,          PID_Number: 2146
-
-[  226.986699] 
-                after all the printks 
-[  226.986702] Process: xfsettingsd
-                       PID_Number: 2378
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986706] Parent process: upstart,          PID_Number: 2146
-
-[  226.986708] 
-                after all the printks 
-[  226.986711] Process: gvfsd
-                       PID_Number: 2382
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986714] Parent process: upstart,          PID_Number: 2146
-
-[  226.986716] 
-                after all the printks 
-[  226.986719] Process: gvfsd-network
-                       PID_Number: 2392
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986723] Parent process: upstart,          PID_Number: 2146
-
-[  226.986725] 
-                after all the printks 
-[  226.986728] Process: pulseaudio
-                       PID_Number: 2410
+[ 1258.648843] Process: pulseaudio
+                       PID_Number: 2248
                        Process State: 1
                        Priority: 109
                        RT_Priority: 0
                        Static Priority: 109
                        Normal Priority: 109
-[  226.986732] Parent process: upstart,          PID_Number: 2146
+[ 1258.648848] Parent process: upstart,          PID_Number: 1981
 
-[  226.986734] 
+[ 1258.648850] 
                 after all the printks 
-[  226.986737] Process: blueman-applet
-                       PID_Number: 2419
+[ 1258.648854] Process: applet.py
+                       PID_Number: 2262
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986741] Parent process: xfce4-session,          PID_Number: 2358
+[ 1258.648858] Parent process: xfce4-session,          PID_Number: 2193
 
-[  226.986743] 
+[ 1258.648861] 
                 after all the printks 
-[  226.986746] Process: applet.py
-                       PID_Number: 2426
+[ 1258.648864] Process: xfce4-power-man
+                       PID_Number: 2271
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986750] Parent process: xfce4-session,          PID_Number: 2358
+[ 1258.648868] Parent process: upstart,          PID_Number: 1981
 
-[  226.986752] 
+[ 1258.648871] 
                 after all the printks 
-[  226.986756] Process: at-spi-bus-laun
-                       PID_Number: 2429
+[ 1258.648874] Process: nm-applet
+                       PID_Number: 2272
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986759] Parent process: upstart,          PID_Number: 2146
+[ 1258.648879] Parent process: xfce4-session,          PID_Number: 2193
 
-[  226.986762] 
+[ 1258.648881] 
                 after all the printks 
-[  226.986765] Process: dbus-daemon
-                       PID_Number: 2437
+[ 1258.648885] Process: polkit-gnome-au
+                       PID_Number: 2274
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986768] Parent process: at-spi-bus-laun,          PID_Number: 2429
+[ 1258.648890] Parent process: xfce4-session,          PID_Number: 2193
 
-[  226.986770] 
+[ 1258.648892] 
                 after all the printks 
-[  226.986773] Process: at-spi2-registr
+[ 1258.648895] Process: sbscheduler
+                       PID_Number: 2283
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648899] Parent process: upstart,          PID_Number: 1981
+
+[ 1258.648902] 
+                after all the printks 
+[ 1258.648906] Process: light-locker
+                       PID_Number: 2284
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648910] Parent process: xfce4-session,          PID_Number: 2193
+
+[ 1258.648913] 
+                after all the printks 
+[ 1258.648916] Process: dconf-service
+                       PID_Number: 2318
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648924] Parent process: upstart,          PID_Number: 1981
+
+[ 1258.648935] 
+                after all the printks 
+[ 1258.648943] Process: xfce4-volumed
+                       PID_Number: 2321
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648952] Parent process: upstart,          PID_Number: 1981
+
+[ 1258.648964] 
+                after all the printks 
+[ 1258.648973] Process: upowerd
+                       PID_Number: 2325
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.648979] Parent process: systemd,          PID_Number: 1
+
+[ 1258.648991] 
+                after all the printks 
+[ 1258.649000] Process: panel-1-whisker
+                       PID_Number: 2408
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649009] Parent process: xfce4-panel,          PID_Number: 2207
+
+[ 1258.649018] 
+                after all the printks 
+[ 1258.649027] Process: gvfs-udisks2-vo
+                       PID_Number: 2412
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649036] Parent process: upstart,          PID_Number: 1981
+
+[ 1258.649050] 
+                after all the printks 
+[ 1258.649058] Process: panel-6-systray
+                       PID_Number: 2416
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649068] Parent process: xfce4-panel,          PID_Number: 2207
+
+[ 1258.649076] 
+                after all the printks 
+[ 1258.649080] Process: panel-10-indica
+                       PID_Number: 2417
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649084] Parent process: xfce4-panel,          PID_Number: 2207
+
+[ 1258.649087] 
+                after all the printks 
+[ 1258.649090] Process: panel-2-datetim
+                       PID_Number: 2418
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649094] Parent process: xfce4-panel,          PID_Number: 2207
+
+[ 1258.649097] 
+                after all the printks 
+[ 1258.649100] Process: udisksd
+                       PID_Number: 2421
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649105] Parent process: systemd,          PID_Number: 1
+
+[ 1258.649107] 
+                after all the printks 
+[ 1258.649111] Process: gvfs-goa-volume
+                       PID_Number: 2432
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649115] Parent process: upstart,          PID_Number: 1981
+
+[ 1258.649118] 
+                after all the printks 
+[ 1258.649121] Process: gvfs-mtp-volume
                        PID_Number: 2439
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986777] Parent process: upstart,          PID_Number: 2146
+[ 1258.649126] Parent process: upstart,          PID_Number: 1981
 
-[  226.986779] 
+[ 1258.649128] 
                 after all the printks 
-[  226.986782] Process: xfce4-power-man
-                       PID_Number: 2442
+[ 1258.649132] Process: upstart
+                       PID_Number: 2441
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986786] Parent process: upstart,          PID_Number: 2146
+[ 1258.649136] Parent process: upstart,          PID_Number: 1981
 
-[  226.986788] 
+[ 1258.649139] 
                 after all the printks 
-[  226.986791] Process: nm-applet
+[ 1258.649143] Process: indicator-sound
                        PID_Number: 2443
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986795] Parent process: xfce4-session,          PID_Number: 2358
+[ 1258.649147] Parent process: upstart,          PID_Number: 2441
 
-[  226.986797] 
+[ 1258.649149] 
                 after all the printks 
-[  226.986800] Process: polkit-gnome-au
-                       PID_Number: 2449
+[ 1258.649153] Process: indicator-appli
+                       PID_Number: 2444
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986804] Parent process: xfce4-session,          PID_Number: 2358
+[ 1258.649157] Parent process: upstart,          PID_Number: 2441
 
-[  226.986806] 
+[ 1258.649160] 
                 after all the printks 
-[  226.986809] Process: light-locker
-                       PID_Number: 2459
+[ 1258.649163] Process: gvfs-afc-volume
+                       PID_Number: 2454
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986813] Parent process: xfce4-session,          PID_Number: 2358
+[ 1258.649168] Parent process: upstart,          PID_Number: 1981
 
-[  226.986815] 
+[ 1258.649171] 
                 after all the printks 
-[  226.986818] Process: sbscheduler
-                       PID_Number: 2468
+[ 1258.649174] Process: gvfs-gphoto2-vo
+                       PID_Number: 2464
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986822] Parent process: upstart,          PID_Number: 2146
+[ 1258.649179] Parent process: upstart,          PID_Number: 1981
 
-[  226.986824] 
+[ 1258.649182] 
                 after all the printks 
-[  226.986827] Process: dconf-service
-                       PID_Number: 2474
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986831] Parent process: upstart,          PID_Number: 2146
-
-[  226.986833] 
-                after all the printks 
-[  226.986836] Process: xfce4-volumed
-                       PID_Number: 2483
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986840] Parent process: upstart,          PID_Number: 2146
-
-[  226.986842] 
-                after all the printks 
-[  226.986845] Process: upowerd
-                       PID_Number: 2489
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986849] Parent process: systemd,          PID_Number: 1
-
-[  226.986851] 
-                after all the printks 
-[  226.986854] Process: xfce4-notifyd
-                       PID_Number: 2500
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986858] Parent process: upstart,          PID_Number: 2146
-
-[  226.986860] 
-                after all the printks 
-[  226.986863] Process: tumblerd
+[ 1258.649186] Process: agetty
                        PID_Number: 2505
                        Process State: 1
-                       Priority: 139
+                       Priority: 120
                        RT_Priority: 0
-                       Static Priority: 139
-                       Normal Priority: 139
-[  226.986867] Parent process: upstart,          PID_Number: 2146
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649190] Parent process: systemd,          PID_Number: 1
 
-[  226.986869] 
+[ 1258.649192] 
                 after all the printks 
-[  226.986872] Process: panel-1-whisker
-                       PID_Number: 2513
+[ 1258.649196] Process: ntpd
+                       PID_Number: 2549
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.986876] Parent process: xfce4-panel,          PID_Number: 2372
+[ 1258.649200] Parent process: systemd,          PID_Number: 1
 
-[  226.986878] 
+[ 1258.649203] 
                 after all the printks 
-[  226.986881] Process: panel-6-systray
-                       PID_Number: 2524
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986885] Parent process: xfce4-panel,          PID_Number: 2372
-
-[  226.986887] 
-                after all the printks 
-[  226.986890] Process: panel-10-indica
-                       PID_Number: 2525
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986894] Parent process: xfce4-panel,          PID_Number: 2372
-
-[  226.986896] 
-                after all the printks 
-[  226.986899] Process: panel-2-datetim
-                       PID_Number: 2526
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986904] Parent process: xfce4-panel,          PID_Number: 2372
-
-[  226.986906] 
-                after all the printks 
-[  226.986910] Process: upstart
-                       PID_Number: 2531
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986916] Parent process: upstart,          PID_Number: 2146
-
-[  226.986980] 
-                after all the printks 
-[  226.986984] Process: indicator-sound
-                       PID_Number: 2533
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.986989] Parent process: upstart,          PID_Number: 2531
-
-[  226.986992] 
-                after all the printks 
-[  226.986996] Process: indicator-appli
-                       PID_Number: 2534
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.987002] Parent process: upstart,          PID_Number: 2531
-
-[  226.987005] 
-                after all the printks 
-[  226.987008] Process: gvfs-udisks2-vo
-                       PID_Number: 2552
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.987012] Parent process: upstart,          PID_Number: 2146
-
-[  226.987015] 
-                after all the printks 
-[  226.987018] Process: udisksd
-                       PID_Number: 2556
-                       Process State: 1
-                       Priority: 120
-                       RT_Priority: 0
-                       Static Priority: 120
-                       Normal Priority: 120
-[  226.987022] Parent process: systemd,          PID_Number: 1
-
-[  226.987025] 
-                after all the printks 
-[  226.987028] Process: gvfs-goa-volume
+[ 1258.649206] Process: nmbd
                        PID_Number: 2565
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987033] Parent process: upstart,          PID_Number: 2146
+[ 1258.649210] Parent process: systemd,          PID_Number: 1
 
-[  226.987035] 
+[ 1258.649213] 
                 after all the printks 
-[  226.987038] Process: gvfs-mtp-volume
-                       PID_Number: 2570
+[ 1258.649217] Process: smbd
+                       PID_Number: 2582
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987042] Parent process: upstart,          PID_Number: 2146
+[ 1258.649221] Parent process: systemd,          PID_Number: 1
 
-[  226.987045] 
+[ 1258.649223] 
                 after all the printks 
-[  226.987049] Process: gvfs-afc-volume
-                       PID_Number: 2575
+[ 1258.649227] Process: smbd
+                       PID_Number: 2584
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987053] Parent process: upstart,          PID_Number: 2146
+[ 1258.649231] Parent process: smbd,          PID_Number: 2582
 
-[  226.987056] 
+[ 1258.649234] 
                 after all the printks 
-[  226.987060] Process: gvfs-gphoto2-vo
-                       PID_Number: 2581
+[ 1258.649236] Process: smbd
+                       PID_Number: 2588
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987067] Parent process: upstart,          PID_Number: 2146
+[ 1258.649268] Parent process: smbd,          PID_Number: 2582
 
-[  226.987137] 
+[ 1258.649271] 
                 after all the printks 
-[  226.987146] Process: obexd
-                       PID_Number: 2590
+[ 1258.649274] Process: gvfsd-dnssd
+                       PID_Number: 2654
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987152] Parent process: upstart,          PID_Number: 2146
+[ 1258.649278] Parent process: upstart,          PID_Number: 1981
 
-[  226.987164] 
+[ 1258.649281] 
                 after all the printks 
-[  226.987173] Process: gvfsd-dnssd
-                       PID_Number: 2637
+[ 1258.649284] Process: gvfsd-metadata
+                       PID_Number: 2668
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987179] Parent process: upstart,          PID_Number: 2146
+[ 1258.649288] Parent process: upstart,          PID_Number: 1981
 
-[  226.987190] 
+[ 1258.649291] 
                 after all the printks 
-[  226.987199] Process: gvfsd-metadata
-                       PID_Number: 2651
+[ 1258.649294] Process: gvfsd-trash
+                       PID_Number: 2672
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987205] Parent process: upstart,          PID_Number: 2146
+[ 1258.649298] Parent process: upstart,          PID_Number: 1981
 
-[  226.987216] 
+[ 1258.649301] 
                 after all the printks 
-[  226.987226] Process: gvfsd-trash
-                       PID_Number: 2655
+[ 1258.649304] Process: gvfsd-computer
+                       PID_Number: 2679
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987234] Parent process: upstart,          PID_Number: 2146
+[ 1258.649308] Parent process: upstart,          PID_Number: 1981
 
-[  226.987243] 
+[ 1258.649311] 
                 after all the printks 
-[  226.987252] Process: gvfsd-computer
-                       PID_Number: 2662
+[ 1258.649314] Process: sh
+                       PID_Number: 2716
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987260] Parent process: upstart,          PID_Number: 2146
+[ 1258.649319] Parent process: Thunar,          PID_Number: 2209
 
-[  226.987270] 
+[ 1258.649321] 
                 after all the printks 
-[  226.987278] Process: sh
-                       PID_Number: 2682
+[ 1258.649325] Process: x-terminal-emul
+                       PID_Number: 2717
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987287] Parent process: Thunar,          PID_Number: 2374
+[ 1258.649329] Parent process: sh,          PID_Number: 2716
 
-[  226.987289] 
+[ 1258.649332] 
                 after all the printks 
-[  226.987292] Process: x-terminal-emul
-                       PID_Number: 2683
+[ 1258.649335] Process: gnome-pty-helpe
+                       PID_Number: 2718
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987296] Parent process: sh,          PID_Number: 2682
+[ 1258.649339] Parent process: x-terminal-emul,          PID_Number: 2717
 
-[  226.987299] 
+[ 1258.649342] 
                 after all the printks 
-[  226.987301] Process: gnome-pty-helpe
-                       PID_Number: 2684
+[ 1258.649345] Process: bash
+                       PID_Number: 2719
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987305] Parent process: x-terminal-emul,          PID_Number: 2683
+[ 1258.649349] Parent process: x-terminal-emul,          PID_Number: 2717
 
-[  226.987307] 
+[ 1258.649352] 
                 after all the printks 
-[  226.987311] Process: bash
-                       PID_Number: 2685
+[ 1258.649356] Process: kworker/0:1
+                       PID_Number: 2792
                        Process State: 1
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987315] Parent process: x-terminal-emul,          PID_Number: 2683
+[ 1258.649361] Parent process: kthreadd,          PID_Number: 2
 
-[  226.987317] 
+[ 1258.649363] 
                 after all the printks 
-[  226.987321] Process: test
-                       PID_Number: 2710
+[ 1258.649366] Process: kworker/1:0
+                       PID_Number: 2816
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649371] Parent process: kthreadd,          PID_Number: 2
+
+[ 1258.649374] 
+                after all the printks 
+[ 1258.649377] Process: kworker/0:0
+                       PID_Number: 2822
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649382] Parent process: kthreadd,          PID_Number: 2
+
+[ 1258.649384] 
+                after all the printks 
+[ 1258.649387] Process: bash
+                       PID_Number: 2832
+                       Process State: 1
+                       Priority: 120
+                       RT_Priority: 0
+                       Static Priority: 120
+                       Normal Priority: 120
+[ 1258.649392] Parent process: x-terminal-emul,          PID_Number: 2717
+
+[ 1258.649394] 
+                after all the printks 
+[ 1258.649398] Process: test
+                       PID_Number: 2845
                        Process State: 0
                        Priority: 120
                        RT_Priority: 0
                        Static Priority: 120
                        Normal Priority: 120
-[  226.987325] Parent process: bash,          PID_Number: 2685
+[ 1258.649403] Parent process: bash,          PID_Number: 2832
 
-[  226.987328] 
+[ 1258.649405] 
                 after all the printks 

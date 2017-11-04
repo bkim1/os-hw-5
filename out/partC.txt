@@ -1,0 +1,4 @@
+[ 1355.058725] Starting syscall: listTimeInfo!
+[ 1355.058725] About to send to user!
+[ 1355.058725] time: 11:25:34
+[ 1355.058725] date: 11/4/2017
